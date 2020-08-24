@@ -21,8 +21,9 @@ class RWGPS {
         $listaCues = $datos->route->course_points;
         
         $lista = array();
-        if (count($listaCues) > 0) foreach( $listaCues as $reg) {            
-            $oCue = new Cue($reg->d / 1000,$reg->n,$reg->t,"");
+        if (count($listaCues) > 0) foreach( $listaCues as $reg) { 
+            $descripcion = ''; if (property_exists($reg, 'description')) $descripcion = $reg->description;
+            $oCue = new Cue($reg->d / 1000,$reg->n,$reg->t,$descripcion);
             $lista[] = $oCue;
         }
         

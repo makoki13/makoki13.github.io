@@ -33,7 +33,7 @@ if (count($lista) > 0) {
         <body>
             <table rules='all'>
                 <thead>
-                    <tr><th colspan='6'>RWGPS Custom Cues report</th></tr>
+                    <tr><th colspan='6'>INFORME CUSTOM CUES #1</th></tr>
                     <tr>
                         <th>#</th>
                         <th>Tr.</th>
@@ -53,8 +53,9 @@ if (count($lista) > 0) {
     $strDistancia = number_format($distancia,1,".",",");
     $tramo = $distancia - $valorAnterior;
     $strTramo = number_format($tramo,1,".",",");
-    $strTipo = $reg->tipo;
-    $strNombre = $reg->nombre;
+    $strTipo = $cue->tipo;
+    $strNombre = $cue->nombre;
+    $strDescripcion = $cue->descripcion;
 
     $cadena .= "
         <tr>
@@ -63,7 +64,7 @@ if (count($lista) > 0) {
             <td class='col3'>$strDistancia</td>
             <td class='col4'>$strTipo</td>
             <td class='col5'>$strNombre</td>
-            <td class='explicacion'>Texto explicativo del CUE en cuestión</td>
+            <td class='explicacion'>$strDescripcion</td>
         </tr>";
 
     $valorAnterior = $distancia;
