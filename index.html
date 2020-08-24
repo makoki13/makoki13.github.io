@@ -1,29 +1,9 @@
 <!--file:///C:/Users/pablo.prieto/Documents/GitHub/makoki13.github.io/index.html-->
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
-        <h1>RWGPS Custom Cues report · A</h1>
-        <script>
-            datosAjax = {
-                                ruta: "33746497"
-                            }
-
-                            $.ajax( {
-                                url: "https://ridewithgps.com/routes/33746497.json?auth_token=54e40ca820e6e6434b2249c8b527e3b3&apikey=824e0ab1&version=2",
-                                contentType: "application/json; charset=utf-8",
-                                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                                data: JSON.stringify( datosAjax ),
-                                dataType: "json",
-                                processData: false,
-                                method: 'POST',
-                                success: function ( data ) {console.log('success')},
-                                error: function ( data ) {console.log( 'Error!!!', data );
-                                }
-                            } ).done( function ( retAjax ) {
-                                console.log(retAjax);
-                            } );
-        </script>
-</body>
+        <h1>RWGPS Custom Cues report</h1>
+    </body>
 </html>
