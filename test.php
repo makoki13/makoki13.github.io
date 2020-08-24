@@ -36,7 +36,7 @@ if (count($lista) > 0) {
     $strTipo = $reg->tipo;
     $strNombre = $reg->nombre;
 
-    $cadena .= "<tr><td>$i</td><td>$strDistancia</td><td>$strTramo</td><td>.$strTipo</td><td>$strNombre</td></tr>";
+    $cadena .= "<tr><td>$i</td><td>$strDistancia</td><td>$strTramo</td><td>$strTipo</td><td>$strNombre</td></tr>";
 
     $valorAnterior = $distancia;
     }
