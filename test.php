@@ -15,6 +15,7 @@ if (count($lista) > 0) {
         <body>
             <table>
                 <thead>
+                    <tr><th colspan='5'>RWGPS Custom Cues report</th></tr>
                     <tr>
                         <th>#</th>
                         <th>Tramo</th>
