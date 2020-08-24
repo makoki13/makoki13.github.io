@@ -4,7 +4,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <h1>RWGPS Custom Cues report · Twice</h1>
+        <h1>RWGPS Custom Cues report · A</h1>
         <script>
             datosAjax = {
                                 ruta: "33746497"
@@ -13,6 +13,7 @@
                             $.ajax( {
                                 url: "https://ridewithgps.com/routes/33746497.json?auth_token=54e40ca820e6e6434b2249c8b527e3b3&apikey=824e0ab1&version=2",
                                 contentType: "application/json; charset=utf-8",
+                                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                                 data: JSON.stringify( datosAjax ),
                                 dataType: "json",
                                 processData: false,
