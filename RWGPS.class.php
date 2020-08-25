@@ -10,7 +10,7 @@ class RWGPS {
     private static $versionAPI = 2;
     //private static $parametros =  {'email': 'pablo.makoki@gmail.com', 'password': 'J0P4G3R1#beatles', 'apikey': '824e0ab1', 'version': '2'};    
     
-    public static function getCustomCues( $idSalida ) {
+    public static function getCustomCues( $idSalida ) {        
         $tiempoAnterior = 0;
         $diferenciaTiempo = 0;
         
@@ -28,5 +28,16 @@ class RWGPS {
         }
         
         return $lista;
+    }
+
+    public static function getIdRuta($ordinal=1) {
+        switch($ordinal) {
+            case 1: return '33746497';
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6: return '33555781';
+        }
     }
 }

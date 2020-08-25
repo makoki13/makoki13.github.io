@@ -1,12 +1,5 @@
 <?php
-
-include_once './RWGPS.class.php';
-
-echo "Cargando datos...\n";
-
-$lista = RWGPS::getCustomCues("33746497");
-$valorAnterior = 0;
-if (count($lista) > 0) {  
+function getCabecera($ordinal) {
     $contenido = "
         <html>
         <head>
@@ -25,7 +18,7 @@ if (count($lista) > 0) {
                 .col1 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: right;width:30px;}
                 .col2 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: right;width:40px;}
                 .col3 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: right;width:50px;}
-                .col4 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: center;width:50px;}
+                .col4 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: center;width:60px;}
                 .col5 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: left;width:150px;}
                 .explicacion {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: left;width:300px;}
             </style>
@@ -33,7 +26,7 @@ if (count($lista) > 0) {
         <body>
             <table rules='all'>
                 <thead>
-                    <tr><th colspan='6'>INFORME CUSTOM CUES #1</th></tr>
+                    <tr><th colspan='6'>INFORME CUSTOM CUES #$ordinal</th></tr>
                     <tr>
                         <th>#</th>
                         <th>Tr.</th>
@@ -45,19 +38,11 @@ if (count($lista) > 0) {
                 </thead>
                 <tbody>
     ";
-    $cadena = '';
-    foreach( $lista as $i => $reg ) {
-    $cue = new Cue($reg->distancia,$reg->nombre,$reg->tipo,$reg->descripcion);
-    
-    $distancia = $cue->distancia;
-    $strDistancia = number_format($distancia,1,".",",");
-    $tramo = $distancia - $valorAnterior;
-    $strTramo = number_format($tramo,1,".",",");
-    $strTipo = $cue->tipo;
-    $strNombre = $cue->nombre;
-    $strDescripcion = $cue->descripcion;
+    return $contenido;
+}
 
-    $cadena .= "
+function getFila($i,$strTramo,$strDistancia,$strTipo,$strNombre,$strDescripcion) {
+    return "
         <tr>
             <td class='col1'>$i</td>
             <td class='col2'>$strTramo</td>
@@ -67,17 +52,8 @@ if (count($lista) > 0) {
             <td class='explicacion'>$strDescripcion</td>
         </tr>";
 
-    $valorAnterior = $distancia;
-    }
 }
 
-$contenido .= $cadena."</tbody></table></body></html>";
-
-echo "Generando html\n";
-
-$handle = fopen('index.html','w+'); 
-fwrite($handle,$contenido); 
-fclose($handle);
-
-echo "Fin!\n";
-
+function getFinal() {
+    return "</tbody></table></body></html>";
+}
