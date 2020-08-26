@@ -33,11 +33,12 @@ class RWGPS {
     public static function getIdRuta($ordinal=1) {
         switch($ordinal) {
             case 1: return '33746497';
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6: return '33555781';
+            case 2: return '33555597';
+            case 3: return '33555684';
+            case 4: return '33746648';
+            case 5: return '33746680';
+            case 6: return '33555743';
+            case 7: return '33555781';
         }
     }
 }
