@@ -15,19 +15,20 @@ if (count($lista) > 0) {
     $contenido =  getCabecera($ordinal);
     $cadena = '';
     foreach( $lista as $i => $reg ) {
-    $cue = new Cue($reg->distancia,$reg->nombre,$reg->tipo,$reg->descripcion);
-    
-    $distancia = $cue->distancia;
-    $strDistancia = number_format($distancia,1,".",",");
-    $tramo = $distancia - $valorAnterior;
-    $strTramo = number_format($tramo,1,".",",");
-    $strTipo = $cue->tipo;
-    $strNombre = $cue->nombre;
-    $strDescripcion = $cue->descripcion;
+        $cue = new Cue($reg->distancia,$reg->nombre,$reg->tipo,$reg->descripcion);
+        
+        $distancia = $cue->distancia;
+        $strDistancia = number_format($distancia,1,".",",");
+        $tramo = $distancia - $valorAnterior;
+        $strTramo = number_format($tramo,1,".",",");
+        $strTipo = $cue->tipo;
+        $strNombre = $cue->nombre;
+        $strDescripcion = $cue->descripcion;
 
-    $cadena .= getFila($i,$strTramo,$strDistancia,$strTipo,$strNombre,$strDescripcion);
-    
-    $valorAnterior = $distancia;
+        $fila = $i + 1;
+        $cadena .= getFila($fila,$strTramo,$strDistancia,$strTipo,$strNombre,$strDescripcion);
+        
+        $valorAnterior = $distancia;
     }
 }
 
@@ -40,6 +41,7 @@ fwrite($handle,$contenido);
 fclose($handle);
 
 $comando = 'C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe ./index.html';
+//$comando = 'C:\"Program Files (x86)"\"Mozilla Firefox"\firefox.exe -profilemanager ./index.html';
 pclose(popen("start " . $comando , "r"));
 
 echo "Fin!\n";

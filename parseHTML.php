@@ -1,4 +1,7 @@
 <?php
+
+include_once './parseCue.php';
+
 function getCabecera($ordinal) {
     $contenido = "
         <html>
@@ -20,7 +23,7 @@ function getCabecera($ordinal) {
                 .col3 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: right;width:50px;}
                 .col4 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: center;width:60px;}
                 .col5 {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: left;width:150px;}
-                .explicacion {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: left;width:300px;}
+                .explicacion {font-size: 12px; font-family: Roboto; color:black; text-shadow: 1px 1px 1px gainsboro;text-align: left;width:400px;}
             </style>
         </head>
         <body>
@@ -42,13 +45,14 @@ function getCabecera($ordinal) {
 }
 
 function getFila($i,$strTramo,$strDistancia,$strTipo,$strNombre,$strDescripcion) {
+    $strDatosPnemonicos = parseNombre($strNombre);    
     return "
         <tr>
             <td class='col1'>$i</td>
             <td class='col2'>$strTramo</td>
             <td class='col3'>$strDistancia</td>
-            <td class='col4'>$strTipo</td>
-            <td class='col5'>$strNombre</td>
+            <td class='col4' $strDatosPnemonicos[2]>$strDatosPnemonicos[0]</td>
+            <td class='col5' $strDatosPnemonicos[3]>$strDatosPnemonicos[1]</td>
             <td class='explicacion'>$strDescripcion</td>
         </tr>";
 
