@@ -37,9 +37,16 @@ function __parseCue__existe($texto,$pnemonico) {
 }
 
 function __parseCue__analizaPnemonico($elemento) {
+    $elemento = strtoupper($elemento);
     $estilo = array(0 => '', 1 => '');
 
-    if (strlen($elemento) > 1) {
+    if (strlen($elemento) > 1) {        
+        if (substr($elemento,0,5) == "FIN_S") {            
+            estadoEstilo::setSubida(false);
+        }
+        if (substr($elemento,0,5) == "FIN_B") {            
+            estadoEstilo::setBajada(false);
+        }
         if (substr($elemento,0,1) == "S") {
             estadoEstilo::setBajada(false);
             estadoEstilo::setSubida(true);

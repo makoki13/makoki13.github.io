@@ -42,6 +42,7 @@ fclose($handle);
 
 $comando = 'C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe ./index.html';
 //$comando = 'C:\"Program Files (x86)"\"Mozilla Firefox"\firefox.exe -profilemanager ./index.html';
+
 pclose(popen("start " . $comando , "r"));
 
 echo "Fin!\n";
