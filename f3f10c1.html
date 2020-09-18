@@ -1,0 +1,78 @@
+<html><head><style>
+                @font-face {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    src: local('Roboto Regular'),
+                    local('Roboto-Regular'),
+                    url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff)
+                    format('woff');
+                }                
+                #contenedor {
+                    width:100%; 
+                    height:100%;
+
+                    display: flex;
+                    flex: auto;
+                    flex-direction: column;
+
+                    font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }#panelSuperior {
+                    flex-grow: 0;
+                    min-height:40px;
+
+                    padding:5px;
+
+                    border:1px solid black;
+                    background-color:gainsboro;                    
+                    font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }#panelCentral {                        
+                    overflow-y: auto;                    
+                    flex-grow: 1;
+                    
+                    border:2px solid black;
+                    background-color: white;                    
+                    font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }#panelInferior {
+                    flex-grow: 0;
+                    min-height:30px;
+
+                    border:1px solid black;
+                    background-color: #FFE4C4;
+                    font-size: 16px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }h3 {
+                    padding-left:15px;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.cancionBloque {
+                    padding-left:25px;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.cancion {
+                    padding-left:20px;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.publicacion {
+                    padding-left:30px;
+                    font-size: 18px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.publicacion_info {
+                    padding-left:40px;
+                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.publicacion_fuente {
+                    padding-left:50px;
+                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;;
+                }.titulo {
+                    padding-left:10px;
+                    font-size: 24px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.fecha, .tipo {
+                    padding-left:15px;
+                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.pie {
+                    padding-left:10px;
+                    font-size: 16px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                    vertical-align:middle;
+                }button {
+                    font-size: 24px; 
+                    font-family: Arial;
+                    font-weight: bolder; 
+                    color:red; 
+                    text-shadow:1px 1px 1px solid orange; 
+                    vertical-align:middle;
+                }</style></head><body><div id='contenedor'><div id='panelSuperior'><button onclick='window.history.back();'>Can you take me back...</button></div><div id='panelCentral'><div><p class='titulo'>Bourèe</p></div></div><div id='panelInferior'><p class='pie'>Nivel 4</p></div></div></body></html>
