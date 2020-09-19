@@ -9,14 +9,17 @@
                     format('woff');
                 }                
                 #contenedor {
-                    width:100%; 
-                    height:100%;
+                    width:99%; 
+                    height:99%;
+                    padding:3px;
 
                     display: flex;
                     flex: auto;
                     flex-direction: column;
 
                     font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                    border:2px solid gray;
+                    background-color:gainsboro;
                 }#panelSuperior {
                     flex-grow: 0;
                     min-height:40px;
@@ -24,49 +27,96 @@
                     padding:5px;
 
                     border:1px solid black;
-                    background-color:gainsboro;                    
+                    background-color:grey;                    
                     font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
                 }#panelCentral {                        
                     overflow-y: auto;                    
                     flex-grow: 1;
+                    text-align:center;
                     
                     border:2px solid black;
-                    background-color: white;                    
+                    background-color: white;
+                    background-size:contain;                    
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-position: center center;
                     font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
-                }#panelInferior {
+                    padding:5px;
+
+                    padding-top:50px;
+                    position: relative;
+                    z-index: 5;
+                }#panelCentral:before {
+                    content: '';
+                    background: url('portada.jpg') center center;
+                    background-size:contain;
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-position: center center;
+                    opacity: 0.1;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+
+                    position: absolute;
+                    z-index: -1;   
+                  }#panelInferior {
                     flex-grow: 0;
                     min-height:30px;
 
                     border:1px solid black;
-                    background-color: #FFE4C4;
+                    background-color: orange;
                     font-size: 16px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.cabecera1 {
+                    text-align:center;
+                    font-size: 36px; font-family: Impact, Charcoal, sans-serif; color:orange; text-shadow:1px 1px 1px solid black;
+                }.portada {
+                    padding-left:25px;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.itemN2 {                    
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
                 }h3 {
                     padding-left:15px;
                     font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
-                }.cancionBloque {
-                    padding-left:25px;
-                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
-                }.cancion {
+                }.bloque_div1 {
+                    text-align:left;
                     padding-left:20px;
                     font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.cancionBloque {
+                    padding-left:70px;
+                    text-align:left;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.cancion {
+                    padding-left:70px;
+                    text-align:left;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
                 }.publicacion {
-                    padding-left:30px;
+                    padding-left:100px;
+                    text-align:left;
                     font-size: 18px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
                 }.publicacion_info {
-                    padding-left:40px;
-                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
-                }.publicacion_fuente {
-                    padding-left:50px;
+                    padding-left:130px;
+                    text-align:left;
+                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;font-weight: bolder;
+                }.publicacion_fuente {                    
+                    text-align:left;
                     font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;;
+                }.publicacion_fuente_data {                    
+                    text-align:left;
+                    padding-left:10px;
+                    font-size: 12px; font-family: Roboto; color:black; text-shadow:1px 1px 1px gainsboro;
                 }.titulo {
                     padding-left:10px;
+                    text-align:left;
                     font-size: 24px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
                 }.fecha, .tipo {
-                    padding-left:15px;
+                    padding-left:40px;
+                    text-align:left;
                     font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
-                }.pie {
-                    padding-left:10px;
-                    font-size: 16px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.pie {                    
+                    text-align:center;
+                    font-size: 16px; font-family: Roboto; font-weight: bolder; color:grey; text-shadow:1px 1px 1px solid black;
                     vertical-align:middle;
                 }button {
                     font-size: 24px; 
@@ -75,7 +125,7 @@
                     color:red; 
                     text-shadow:1px 1px 1px solid orange; 
                     vertical-align:middle;
-                }</style></head><body><div id='contenedor'><div id='panelSuperior'><button onclick='window.history.back();'>Can you take me back...</button></div><div id='panelCentral'><div><p class='titulo'>A Hard Day's Night LP Sessions</p></div><div><p class='fecha'>From 25/02/1964 to 22/06/1964</p></div><h3 style='color:red;'>1.- 25 Febrero</h3><div><p class='fecha'>25/02/1964</p><p class='tipo'></p></div>
+                }</style></head><body><div id='contenedor'><div id='panelSuperior'><button onclick='window.history.back();'>Can you take me back...</button></div><div id='panelCentral'><div><p class='titulo'>A Hard Day's Night LP Sessions</p></div><div><p class='fecha'>From 25/02/1964 to 22/06/1964</p></div><div><p class='fecha'>Recording</p></div><p class='bloque_div1'>1.- 25 Febrero</h3><div><p class='fecha'>25/02/1964</p><p class='tipo'></p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b1c1.html'>
                                 Chapter 3.6 1.- You Can't Do That</a></p>
@@ -84,7 +134,7 @@
                                 Chapter 3.6 2.- And I Love Her</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b1c3.html'>
-                                Chapter 3.6 3.- I Should Have Known Better</a></p><h3 style='color:red;'>2.- 26 Febrero</h3><div><p class='fecha'>26/02/1964</p><p class='tipo'>Mixing & recording</p></div>
+                                Chapter 3.6 3.- I Should Have Known Better</a></p><p class='bloque_div1'>2.- 26 Febrero</h3><div><p class='fecha'>26/02/1964</p><p class='tipo'>Mixing & recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b2c1.html'>
                                 Chapter 3.6 1.- You Can't Do That</a></p>
@@ -96,7 +146,7 @@
                                 Chapter 3.6 3.- I Should Have Known Better</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b2c3.html'>
-                                Chapter 3.6 3.- And I Love Her</a></p><h3 style='color:red;'>3.- 27 Febrero</h3><div><p class='fecha'>27/02/1964</p><p class='tipo'>Recording</p></div>
+                                Chapter 3.6 3.- And I Love Her</a></p><p class='bloque_div1'>3.- 27 Febrero</h3><div><p class='fecha'>27/02/1964</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b3c1.html'>
                                 Chapter 3.6 1.- And I Love Her</a></p>
@@ -105,7 +155,7 @@
                                 Chapter 3.6 2.- Tell Me Why</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b3c3.html'>
-                                Chapter 3.6 3.- If I Fell</a></p><h3 style='color:red;'>4.- 01 March</h3><div><p class='fecha'>01/03/1964</p><p class='tipo'>Recording</p></div>
+                                Chapter 3.6 3.- If I Fell</a></p><p class='bloque_div1'>4.- 01 March</h3><div><p class='fecha'>01/03/1964</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b4c1.html'>
                                 Chapter 3.6 1.- I'm Happy Just To Dance With you</a></p>
@@ -114,7 +164,7 @@
                                 Chapter 3.6 2.- Long Tall Sally</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b4c3.html'>
-                                Chapter 3.6 3.- I Call Your Name</a></p><h3 style='color:red;'>5.- 3 March</h3><div><p class='fecha'>03/03/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 3.- I Call Your Name</a></p><p class='bloque_div1'>5.- 3 March</h3><div><p class='fecha'>03/03/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b5c1.html'>
                                 Chapter 3.6 1.- I Should Have Known Better</a></p>
@@ -132,10 +182,10 @@
                                 Chapter 3.6 3.- I'm Happy Just To Dance With You</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b5c3.html'>
-                                Chapter 3.6 3.- I Call Your Name</a></p><h3 style='color:red;'>6.- 4 March</h3><div><p class='fecha'>04/03/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 3.- I Call Your Name</a></p><p class='bloque_div1'>6.- 4 March</h3><div><p class='fecha'>04/03/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b6c1.html'>
-                                Chapter 3.6 1.- I Call Your Name</a></p><h3 style='color:red;'>7.- 10 March</h3><div><p class='fecha'>10/03/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 1.- I Call Your Name</a></p><p class='bloque_div1'>7.- 10 March</h3><div><p class='fecha'>10/03/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b7c1.html'>
                                 Chapter 3.6 1.- Can't Buy Me Love</a></p>
@@ -153,28 +203,28 @@
                                 Chapter 3.6 4.- Komm, Gib Mir Deine Hand</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b7c5.html'>
-                                Chapter 3.6 5.- Sie Liebt Dich</a></p><h3 style='color:red;'>8.- 12 March</h3><div><p class='fecha'>12/03/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 5.- Sie Liebt Dich</a></p><p class='bloque_div1'>8.- 12 March</h3><div><p class='fecha'>12/03/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b8c1.html'>
                                 Chapter 3.6 1.- Komm, Gib Mir Deine Hand</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b8c1.html'>
-                                Chapter 3.6 1.- Sie Liebt Dich</a></p><h3 style='color:red;'>9.- 16 April</h3><div><p class='fecha'>16/04/1964</p><p class='tipo'>Recording</p></div>
+                                Chapter 3.6 1.- Sie Liebt Dich</a></p><p class='bloque_div1'>9.- 16 April</h3><div><p class='fecha'>16/04/1964</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b9c1.html'>
-                                Chapter 3.6 1.- A Hard Day's Night</a></p><h3 style='color:red;'>10.- 20 April</h3><div><p class='fecha'>20/04/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 1.- A Hard Day's Night</a></p><p class='bloque_div1'>10.- 20 April</h3><div><p class='fecha'>20/04/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b10c1.html'>
                                 Chapter 3.6 1.- A Hard Day's Night</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b10c2.html'>
-                                Chapter 3.6 2.- A Hard Day's Night</a></p><h3 style='color:red;'>11.- 20 April</h3><div><p class='fecha'>20/04/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 2.- A Hard Day's Night</a></p><p class='bloque_div1'>11.- 20 April</h3><div><p class='fecha'>20/04/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b11c1.html'>
-                                Chapter 3.6 1.- A Hard Day's Night</a></p><h3 style='color:red;'>12.- 22 May</h3><div><p class='fecha'>22/04/1964</p><p class='tipo'>Recording</p></div>
+                                Chapter 3.6 1.- A Hard Day's Night</a></p><p class='bloque_div1'>12.- 22 May</h3><div><p class='fecha'>22/04/1964</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b12c1.html'>
-                                Chapter 3.6 1.- A Hard Day's Night</a></p><h3 style='color:red;'>13.- 1 June</h3><div><p class='fecha'>01/06/1964</p><p class='tipo'>Recording</p></div>
+                                Chapter 3.6 1.- A Hard Day's Night</a></p><p class='bloque_div1'>13.- 1 June</h3><div><p class='fecha'>01/06/1964</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b13c1.html'>
                                 Chapter 3.6 1.- Matchbox</a></p>
@@ -186,7 +236,7 @@
                                 Chapter 3.6 1.- Slow Down</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b13c1.html'>
-                                Chapter 3.6 1.- I'll Be Back</a></p><h3 style='color:red;'>14.- 2 June</h3><div><p class='fecha'>02/06/1964</p><p class='tipo'>Recording</p></div>
+                                Chapter 3.6 1.- I'll Be Back</a></p><p class='bloque_div1'>14.- 2 June</h3><div><p class='fecha'>02/06/1964</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b14c1.html'>
                                 Chapter 3.6 1.- Any Time At All</a></p>
@@ -195,7 +245,7 @@
                                 Chapter 3.6 2.- Things We Said Today</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b14c3.html'>
-                                Chapter 3.6 3.- When I Get Home</a></p><h3 style='color:red;'>15.- 4 June</h3><div><p class='fecha'>04/06/1964</p><p class='tipo'>Mixing & recording</p></div>
+                                Chapter 3.6 3.- When I Get Home</a></p><p class='bloque_div1'>15.- 4 June</h3><div><p class='fecha'>04/06/1964</p><p class='tipo'>Mixing & recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b15c1.html'>
                                 Chapter 3.6 1.- Long Tall Sally</a></p>
@@ -216,7 +266,7 @@
                                 Chapter 3.6 6.- Any Time At All</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b15c6.html'>
-                                Chapter 3.6 6.- I'll Cry Instead</a></p><h3 style='color:red;'>16.- 9 June</h3><div><p class='fecha'>09/06/1964</p><p class='tipo'>Tape copy & mixing</p></div><h3 style='color:red;'>17.- 22 June</h3><div><p class='fecha'>22/06/1964</p><p class='tipo'>Mixing</p></div>
+                                Chapter 3.6 6.- I'll Cry Instead</a></p><p class='bloque_div1'>16.- 9 June</h3><div><p class='fecha'>09/06/1964</p><p class='tipo'>Tape copy & mixing</p></div><p class='bloque_div1'>17.- 22 June</h3><div><p class='fecha'>22/06/1964</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f3f6b17c1.html'>
                                 Chapter 3.6 1.- Any Time At All</a></p>
@@ -267,4 +317,4 @@
                                 Chapter 3.6 14.- Long Tall Sally</a></p>
                         <p class='cancionBloque'>
                             <a href='f3f6b17c15.html'>
-                                Chapter 3.6 15.- I'll Cry Instead</a></p></div><div id='panelInferior'><p class='pie'>Nivel 3</p></div></div></body></html>
+                                Chapter 3.6 15.- I'll Cry Instead</a></p></div><div id='panelInferior'><div class='pie'>Makoki enterprises&copy; All Rights Reversed</div></div></div></body></html>

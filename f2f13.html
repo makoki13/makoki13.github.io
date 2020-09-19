@@ -9,14 +9,17 @@
                     format('woff');
                 }                
                 #contenedor {
-                    width:100%; 
-                    height:100%;
+                    width:99%; 
+                    height:99%;
+                    padding:3px;
 
                     display: flex;
                     flex: auto;
                     flex-direction: column;
 
                     font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                    border:2px solid gray;
+                    background-color:gainsboro;
                 }#panelSuperior {
                     flex-grow: 0;
                     min-height:40px;
@@ -24,49 +27,96 @@
                     padding:5px;
 
                     border:1px solid black;
-                    background-color:gainsboro;                    
+                    background-color:grey;                    
                     font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
                 }#panelCentral {                        
                     overflow-y: auto;                    
                     flex-grow: 1;
+                    text-align:center;
                     
                     border:2px solid black;
-                    background-color: white;                    
+                    background-color: white;
+                    background-size:contain;                    
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-position: center center;
                     font-size: 16px; font-family: Roboto;font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
-                }#panelInferior {
+                    padding:5px;
+
+                    padding-top:50px;
+                    position: relative;
+                    z-index: 5;
+                }#panelCentral:before {
+                    content: '';
+                    background: url('portada.jpg') center center;
+                    background-size:contain;
+                    background-repeat: no-repeat;
+                    background-attachment: scroll;
+                    background-position: center center;
+                    opacity: 0.1;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+
+                    position: absolute;
+                    z-index: -1;   
+                  }#panelInferior {
                     flex-grow: 0;
                     min-height:30px;
 
                     border:1px solid black;
-                    background-color: #FFE4C4;
+                    background-color: orange;
                     font-size: 16px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.cabecera1 {
+                    text-align:center;
+                    font-size: 36px; font-family: Impact, Charcoal, sans-serif; color:orange; text-shadow:1px 1px 1px solid black;
+                }.portada {
+                    padding-left:25px;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.itemN2 {                    
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
                 }h3 {
                     padding-left:15px;
                     font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
-                }.cancionBloque {
-                    padding-left:25px;
-                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
-                }.cancion {
+                }.bloque_div1 {
+                    text-align:left;
                     padding-left:20px;
                     font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.cancionBloque {
+                    padding-left:70px;
+                    text-align:left;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
+                }.cancion {
+                    padding-left:70px;
+                    text-align:left;
+                    font-size: 18px; font-family: Roboto; color:black; font-weight: bolder; text-shadow:1px 1px 1px solid gainsboro;
                 }.publicacion {
-                    padding-left:30px;
+                    padding-left:100px;
+                    text-align:left;
                     font-size: 18px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
                 }.publicacion_info {
-                    padding-left:40px;
-                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
-                }.publicacion_fuente {
-                    padding-left:50px;
+                    padding-left:130px;
+                    text-align:left;
+                    font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;font-weight: bolder;
+                }.publicacion_fuente {                    
+                    text-align:left;
                     font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;;
+                }.publicacion_fuente_data {                    
+                    text-align:left;
+                    padding-left:10px;
+                    font-size: 12px; font-family: Roboto; color:black; text-shadow:1px 1px 1px gainsboro;
                 }.titulo {
                     padding-left:10px;
+                    text-align:left;
                     font-size: 24px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
                 }.fecha, .tipo {
-                    padding-left:15px;
+                    padding-left:40px;
+                    text-align:left;
                     font-size: 14px; font-family: Roboto; color:black; text-shadow:1px 1px 1px solid gainsboro;
-                }.pie {
-                    padding-left:10px;
-                    font-size: 16px; font-family: Roboto; font-weight: bolder; color:black; text-shadow:1px 1px 1px solid gainsboro;
+                }.pie {                    
+                    text-align:center;
+                    font-size: 16px; font-family: Roboto; font-weight: bolder; color:grey; text-shadow:1px 1px 1px solid black;
                     vertical-align:middle;
                 }button {
                     font-size: 24px; 
@@ -75,7 +125,7 @@
                     color:red; 
                     text-shadow:1px 1px 1px solid orange; 
                     vertical-align:middle;
-                }</style></head><body><div id='contenedor'><div id='panelSuperior'><button onclick='window.history.back();'>Can you take me back...</button></div><div id='panelCentral'><div><p class='titulo'>With The Beatles Sessions</p></div><div><p class='fecha'>From 01/07/1963 to 30/10/1963</p></div><h3 style='color:red;'>1.- 1 July</h3><div><p class='fecha'>01/07/1963</p><p class='tipo'>Recording</p></div>
+                }</style></head><body><div id='contenedor'><div id='panelSuperior'><button onclick='window.history.back();'>Can you take me back...</button></div><div id='panelCentral'><div><p class='titulo'>With The Beatles Sessions</p></div><div><p class='fecha'>From 01/07/1963 to 30/10/1963</p></div><div><p class='fecha'></p></div><p class='bloque_div1'>1.- 1 July</h3><div><p class='fecha'>01/07/1963</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b1c1.html'>
                                 Chapter 2.13 1.- You Really Got A Hold On Me</a></p>
@@ -87,7 +137,7 @@
                                 Chapter 2.13 3.- Devil In Her Heart</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b1c4.html'>
-                                Chapter 2.13 4.- Till There Was You</a></p><h3 style='color:red;'>2.- 1 July</h3><div><p class='fecha'>01/07/1963</p><p class='tipo'>Recording</p></div>
+                                Chapter 2.13 4.- Till There Was You</a></p><p class='bloque_div1'>2.- 1 July</h3><div><p class='fecha'>01/07/1963</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b2c4.html'>
                                 Chapter 2.13 4.- Please Mr Postman</a></p>
@@ -108,7 +158,7 @@
                                 Chapter 2.13 7.- All My Loving</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b2c4.html'>
-                                Chapter 2.13 4.- Please Mr Postman</a></p><h3 style='color:red;'>3.- 21 August</h3><div><p class='fecha'>21/08/1963</p><p class='tipo'>Mixing</p></div>
+                                Chapter 2.13 4.- Please Mr Postman</a></p><p class='bloque_div1'>3.- 21 August</h3><div><p class='fecha'>21/08/1963</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b3c2.html'>
                                 Chapter 2.13 2.- Money (That's What I Want)</a></p>
@@ -126,7 +176,7 @@
                                 Chapter 2.13 5.- Devil In Her Heart</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b3c6.html'>
-                                Chapter 2.13 6.- All My Loving</a></p><h3 style='color:red;'>4.- 11 September</h3><div><p class='fecha'>11/09/1963</p><p class='tipo'>Recording</p></div>
+                                Chapter 2.13 6.- All My Loving</a></p><p class='bloque_div1'>4.- 11 September</h3><div><p class='fecha'>11/09/1963</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b4c1.html'>
                                 Chapter 2.13 1.- I Wanna Be your Man</a></p>
@@ -141,7 +191,7 @@
                                 Chapter 2.13 1.- Not A Second Time</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b4c1.html'>
-                                Chapter 2.13 1.- Don't Bother Me</a></p><h3 style='color:red;'>5.- 12 September</h3><div><p class='fecha'>12/09/1963</p><p class='tipo'>Recording</p></div>
+                                Chapter 2.13 1.- Don't Bother Me</a></p><p class='bloque_div1'>5.- 12 September</h3><div><p class='fecha'>12/09/1963</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b5c1.html'>
                                 Chapter 2.13 1.- Messages to Australia</a></p>
@@ -156,7 +206,7 @@
                                 Chapter 2.13 1.- Little Child</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b5c1.html'>
-                                Chapter 2.13 1.- I Wanna Be You Man</a></p><h3 style='color:red;'>6.- 30 September</h3><div><p class='fecha'>30/09/1963</p><p class='tipo'>Recording (George Martin) & Mixing</p></div>
+                                Chapter 2.13 1.- I Wanna Be You Man</a></p><p class='bloque_div1'>6.- 30 September</h3><div><p class='fecha'>30/09/1963</p><p class='tipo'>Recording (George Martin) & Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b6c1.html'>
                                 Chapter 2.13 1.- Little Child</a></p>
@@ -177,13 +227,13 @@
                                 Chapter 2.13 1.- Don't Bother Me</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b6c1.html'>
-                                Chapter 2.13 1.- Not A Second Time</a></p><h3 style='color:red;'>7.- 30 October</h3><div><p class='fecha'>03/10/1963</p><p class='tipo'>Recording</p></div>
+                                Chapter 2.13 1.- Not A Second Time</a></p><p class='bloque_div1'>7.- 30 October</h3><div><p class='fecha'>03/10/1963</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b7c1.html'>
                                 Chapter 2.13 1.- I Wanna Be Your Man</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b7c2.html'>
-                                Chapter 2.13 2.- Little Child</a></p><h3 style='color:red;'>8.- 17 October</h3><div><p class='fecha'>17/10/1963</p><p class='tipo'>Recording</p></div>
+                                Chapter 2.13 2.- Little Child</a></p><p class='bloque_div1'>8.- 17 October</h3><div><p class='fecha'>17/10/1963</p><p class='tipo'>Recording</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b8c1.html'>
                                 Chapter 2.13 1.- The Beatles Christmas Record</a></p>
@@ -195,13 +245,13 @@
                                 Chapter 2.13 1.- I Want To Hold Your Hand</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b8c2.html'>
-                                Chapter 2.13 2.- This Boy</a></p><h3 style='color:red;'>9.- 21 October</h3><div><p class='fecha'>21/10/1963</p><p class='tipo'>Mixing</p></div>
+                                Chapter 2.13 2.- This Boy</a></p><p class='bloque_div1'>9.- 21 October</h3><div><p class='fecha'>21/10/1963</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b9c1.html'>
                                 Chapter 2.13 1.- I Want To Hold Your Hand</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b9c2.html'>
-                                Chapter 2.13 2.- This Boy</a></p><h3 style='color:red;'>10.- 23 October</h3><div><p class='fecha'>23/10/1963</p><p class='tipo'>Recording & mixing</p></div>
+                                Chapter 2.13 2.- This Boy</a></p><p class='bloque_div1'>10.- 23 October</h3><div><p class='fecha'>23/10/1963</p><p class='tipo'>Recording & mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b10c1.html'>
                                 Chapter 2.13 1.- I Wanna Be Your Man</a></p>
@@ -210,7 +260,7 @@
                                 Chapter 2.13 2.- Little Child</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b10c2.html'>
-                                Chapter 2.13 2.- Hold Me Tight</a></p><h3 style='color:red;'>11.- 29 October</h3><div><p class='fecha'>29/10/1963</p><p class='tipo'>Mixing</p></div>
+                                Chapter 2.13 2.- Hold Me Tight</a></p><p class='bloque_div1'>11.- 29 October</h3><div><p class='fecha'>29/10/1963</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b11c1.html'>
                                 Chapter 2.13 1.- It Wont Be Long</a></p>
@@ -252,7 +302,7 @@
                                 Chapter 2.13 13.- Not A Second Time</a></p>
                         <p class='cancionBloque'>
                             <a href='f2f13b11c14.html'>
-                                Chapter 2.13 14.- Money (That's What I Want)</a></p><h3 style='color:red;'>12.- 30 October</h3><div><p class='fecha'>30/10/1963</p><p class='tipo'>Mixing</p></div>
+                                Chapter 2.13 14.- Money (That's What I Want)</a></p><p class='bloque_div1'>12.- 30 October</h3><div><p class='fecha'>30/10/1963</p><p class='tipo'>Mixing</p></div>
                         <p class='cancionBloque'>
                             <a href='f2f13b12c1.html'>
-                                Chapter 2.13 1.- Money (That's What I Want)</a></p></div><div id='panelInferior'><p class='pie'>Nivel 3</p></div></div></body></html>
+                                Chapter 2.13 1.- Money (That's What I Want)</a></p></div><div id='panelInferior'><div class='pie'>Makoki enterprises&copy; All Rights Reversed</div></div></div></body></html>
