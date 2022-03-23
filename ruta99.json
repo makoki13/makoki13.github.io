@@ -1,25 +1,23 @@
-{
-    "puntos": [
-        {
-            "nombre": "Gandia",
-            "distancia": 0,
-            "atributos": [
-                "inicio"
-            ]
-        },
-        {
-            "nombre": "Subida 1 (CP1)",
-            "distancia": 17.4,
-            "atributos": [
-                "inicio_subida"
-            ]
-        },
-        {
-            "nombre": "Gasolinera",
-            "distancia": 17.8,
-            "atributos": [
-                "Gasolinera"
-            ]
-        }
-    ]
-}
+[
+    {
+        "nombre": "Gandia",
+        "distancia": 0,
+        "atributos": [
+            "inicio"
+        ]
+    },
+    {
+        "nombre": "Subida 1 (CP1)",
+        "distancia": 17.4,
+        "atributos": [
+            "inicio_subida"
+        ]
+    },
+    {
+        "nombre": "Gasolinera",
+        "distancia": 17.8,
+        "atributos": [
+            "Gasolinera"
+        ]
+    }
+]
