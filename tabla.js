@@ -9,7 +9,7 @@ function carga() {
             console.log('cargando datos');
         })
         .done(function (evt) {
-
+            console.log('evt', evt);
             // Set timeout for lazy loading
             setTimeout(function () {
                 var result = JSON.parse(evt);
@@ -32,4 +32,19 @@ function carga() {
         .then(function (evt) {
             console.log("finalizado...");
         });
+}
+
+function carga_2() {
+    $.getJSON('ruta99.json', function (data) {
+        var fila = '';
+        $.each(data, function (key, value) {
+            fila += '<tr>';
+            fila += '<td>campo1</td>';
+            fila += '<td>campo2</td>';
+            fila += '<td>campo3</td>';
+            fila += '<td>campo4</td>';
+            fila += '</tr>';
+        })
+        $("#cuerpo_tabla").append(fila);
+    });
 }
