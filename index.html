@@ -1,13 +1,37 @@
 <html>
 
 <head>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.2.4/jquery.floatThead.min.js" integrity="sha512-QhaSMfyPHtKHbg7e//C6Y/nmpflIM9PgmhZ/TR+BcbRaR9eYXzZRfuK5D9pnVlp+J5zWXu5ckVzX4ycOQy/jZA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+            $('#principal').floatThead();
+        });
+    </script>
 </head>
 
 <body>
-    <script type="text/javascript">
-        alert("HOLA");
-    </script>
+    <table id='principal' style="width:100%;">
+        <tr>
+            <td style="width:10%;border:0px solid black;background-color: aqua;">&nbsp;</td>
+            <td style="width:80%;background-color: aliceblue;">
+                <table style="width:100%;border:2px solid black;">
+                    <tr>
+                        <td style="text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">UCP</td>
+                    </tr>
+                    <tr>
+                        <td><iframe style="width:100%;height:100%;border:1px solid black;" src="tabla.html"></iframe></td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                </table>
+            </td>
+            <td style="width:10%;border:0px solid black;background-color: aqua;">&nbsp;</td>
+        </tr>
+    </table>
 </body>
 
 </html>

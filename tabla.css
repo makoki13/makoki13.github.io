@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+  }
+  
+  th {
+    background-color: darkred;
+    color: white;
+    text-shadow: 1px 1px 1px black;;
+    text-align:center;
+  }
+
+  .proyecto {
+      font-size: 48px;
+  }
