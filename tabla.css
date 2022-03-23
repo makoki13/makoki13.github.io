@@ -1,14 +1,27 @@
 body {
     background-color: white;
+    margin:0px;padding:0px;
   }
-  
+
   th {
     background-color: darkred;
     color: white;
-    text-shadow: 1px 1px 1px black;;
+    text-shadow: 1px 1px 1px black;
     text-align:center;
+    border:1px solid white;
   }
 
   .proyecto {
       font-size: 48px;
   }
+
+  table{
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    border-style:hidden;
+}
+    td{
+        padding:0.25em;
+        border:1px solid gainsboro;
+    }

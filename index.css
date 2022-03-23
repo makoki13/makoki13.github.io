@@ -1,0 +1,16 @@
+.ui-layout-north { /* all 'panes' */
+    background: gainsboro;
+    border: 1px solid brown;
+    overflow: hidden !important;
+    min-height:60px;
+}
+
+.ui-layout-south {
+    overflow: hidden !important;
+    min-height:60px;
+}
+
+.ui-layout-center {
+    overflow: hidden !important;
+    height:87%;
+}
