@@ -18,18 +18,24 @@
     <table id="principal" style="width:100%;">
         <thead>
             <tr>
-                <th class="proyecto" colspan="4">PROYECTO</th>
+                <th class="proyecto" colspan="5">PROYECTO</th>
             </tr>
             <tr>
                 <th style="min-width:300px;">Punto</th>
                 <th style="min-width:100px;">Distancia</th>
+                <th style="min-width:100px;">Intervalo</th>
                 <th style="min-width:300px;">Atributos</th>
                 <th style="width:100%;">Notas</th>
             </tr>
         </thead>
         <tbody id="cuerpo_tabla"></tbody>
     </table>
-    <script>carga_2();</script>
+    <script>
+        carga().then(function (returndata) {
+            muestra(returndata);
+        });
+
+    </script>
 </body>
 
 </html>

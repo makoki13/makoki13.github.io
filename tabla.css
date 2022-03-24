@@ -12,7 +12,7 @@ body {
   }
 
   .proyecto {
-      font-size: 48px;
+      font-size: 36px;
   }
 
   table{
@@ -24,4 +24,5 @@ body {
     td{
         padding:0.25em;
         border:1px solid gainsboro;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 14px;
     }

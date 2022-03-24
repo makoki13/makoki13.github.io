@@ -1,50 +1,65 @@
+
 function carga() {
-    $.ajax({
-        url: 'ruta99.json',
-        method: 'GET',
-        cache: false,
-        type: "text/json"
-    })
-        .always(function () {
-            console.log('cargando datos');
+    var distancia_anterior = 0; var lista = [];
+    vector = $.getJSON('ruta99.json', function (data) {
+        var i = 0;
+        $.each(data, function (key, value) {
+            /* fila += '<tr>';
+            fila += '<td>' + value.nombre + '</td>';
+            fila += '<td>' + value.distancia + '</td>'; */
+
+
+            if (i > 0) {
+                var valor_distancia_anterior = value.distancia - distancia_anterior;
+                var fila_anterior = "" + (i - 1);
+            }
+
+            lista[i] = {};
+            lista[i].nombre_poi = value.nombre;
+            lista[i].distancia = value.distancia;
+            if (i > 0) {
+                lista[i - 1].intervalo = valor_distancia_anterior.toFixed(1);
+            }
+            lista[i].atributos = value.atributos;
+
+            distancia_anterior = parseInt(value.distancia);
+
+            /* fila += '<td></td>';
+            fila += '<td>' + value.atributos + '</td>';
+            fila += '<td>&nbsp;</td>';
+            fila += '</tr>'; */
+
+            i++;
+
+
+            //console.log('lista[i]', lista[i]);
         })
-        .done(function (evt) {
-            console.log('evt', evt);
-            // Set timeout for lazy loading
-            setTimeout(function () {
-                var result = JSON.parse(evt);
-                var html = '<h2>Data Dokter</h2>';
-                html += '<tr>';
-                for (var i = 0; i < result.puntos.length; i++) {
-                    html += '<td>' + result.puntos[i].nombre + '</td>'
-                        + '<td>' + result.puntos[i].distancia + '</td>'
-                        + '<td>atributos</td>'
-                        + '<td>notas</td>';
-                }
-                html += '</tr>';
-                // Set all content
-                $('#cuerpo_tabla').html(html);
-            }, 1000);
-        })
-        .fail(function () {
-            alert('Error : Failed to reach API Url or check your connection');
-        })
-        .then(function (evt) {
-            console.log("finalizado...");
-        });
+
+        //$("#cuerpo_tabla").append(fila);
+    }).then(function (data) {
+        return lista;
+    });
+
+    return vector;
 }
 
-function carga_2() {
-    $.getJSON('ruta99.json', function (data) {
-        var fila = '';
-        $.each(data, function (key, value) {
-            fila += '<tr>';
-            fila += '<td>campo1</td>';
-            fila += '<td>campo2</td>';
-            fila += '<td>campo3</td>';
-            fila += '<td>campo4</td>';
-            fila += '</tr>';
-        })
-        $("#cuerpo_tabla").append(fila);
-    });
+function muestra(vector) {
+    var fila = '';
+    console.log(vector);
+    $.each(vector, function (key, value) {
+        fila += '<tr>';
+        fila += '<td>' + value.nombre_poi + '</td>';
+        fila += '<td>' + value.distancia + '</td>';
+        if (typeof value.intervalo !== "undefined") {
+            fila += '<td>' + value.intervalo + '</td>';
+        }
+        else {
+            fila += '<td>&nbsp;</td>';
+        }
+        fila += '<td>' + value.atributos + '</td>';
+        fila += '<td>&nbsp;</td>';
+        fila += '</tr>';
+    })
+
+    $("#cuerpo_tabla").append(fila);
 }

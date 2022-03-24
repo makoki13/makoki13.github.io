@@ -2,7 +2,7 @@
     background: gainsboro;
     border: 1px solid brown;
     overflow: hidden !important;
-    min-height:60px;
+    min-height:20px;
 }
 
 .ui-layout-south {

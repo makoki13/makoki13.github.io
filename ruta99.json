@@ -19,5 +19,19 @@
         "atributos": [
             "Gasolinera"
         ]
+    },
+    {
+        "nombre": "Fin CP1",
+        "distancia": 19.2,
+        "atributos": [
+            "fin_subida"
+        ]
+    },
+    {
+        "nombre": "Inicio CP2",
+        "distancia": 20.6,
+        "atributos": [
+            "inicio_subida"
+        ]
     }
 ]
