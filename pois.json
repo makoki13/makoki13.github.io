@@ -43,7 +43,13 @@
     "nombre_poi": "punto 50",
     "distancia": 50,
     "atributos": "texto",
-    "intervalo": "250.0"
+    "intervalo": "25.0"
+  },
+  {
+    "nombre_poi": "punto 75",
+    "distancia": 75,
+    "atributos": "guardar",
+    "intervalo": "225.0"
   },
   {
     "nombre_poi": "T2",
