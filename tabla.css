@@ -26,3 +26,9 @@ body {
         border:1px solid gainsboro;
         font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 14px;
     }
+
+    button {
+        width:90%;
+        text-align: center;
+        border:1px solid rebeccapurple;
+    }

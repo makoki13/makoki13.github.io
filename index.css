@@ -14,3 +14,60 @@
     overflow: hidden !important;
     height:87%;
 }
+
+.proyecto {
+    font-size: 36px;
+    background-color: darkred;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align:center;
+    border:1px solid white;
+}
+
+table{
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    border-style:hidden;
+}
+
+#bloqueo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    border: 1px solid #000000;
+    background: #DDDDDD;
+    z-index: 3;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    visibility: hidden;
+}
+
+#nuevo_poi {
+    position: absolute;
+    top: 130px;
+    left: 330px;
+    height: 170px;
+    width: 600px;
+    border: 1px solid #000000;
+    background: #DDDDDD;
+    z-index: 4;
+    visibility: hidden;
+}
+
+#nuevo_poi_sombra {
+    position: absolute;
+    top: 135px;
+    left: 335px;
+    height: 170px;
+    width: 600px;
+    border: 1px solid #AAAAAA;
+    background: #AAAAAA;
+    z-index: 3;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    visibility: hidden;
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "nombre_poi": "Gandia",
+    "distancia": 0,
+    "atributos": [
+      "inicio"
+    ],
+    "intervalo": "17.4"
+  },
+  {
+    "nombre_poi": "Subida 1 (CP1)",
+    "distancia": 17.4,
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.8"
+  },
+  {
+    "nombre_poi": "Gasolinera",
+    "distancia": 17.8,
+    "atributos": [
+      "Gasolinera"
+    ],
+    "intervalo": "2.2"
+  },
+  {
+    "nombre_poi": "Fin CP1",
+    "distancia": 19.2,
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "1.6"
+  },
+  {
+    "nombre_poi": "Inicio CP2",
+    "distancia": 20.6,
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "30.0"
+  },
+  {
+    "nombre_poi": "punto 50",
+    "distancia": 50,
+    "atributos": "texto",
+    "intervalo": "250.0"
+  },
+  {
+    "nombre_poi": "T2",
+    "distancia": 300,
+    "atributos": "texto",
+    "intervalo": "40.0"
+  },
+  {
+    "nombre_poi": "t3",
+    "distancia": 340,
+    "atributos": "otro texto"
+  }
+]

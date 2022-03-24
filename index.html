@@ -5,7 +5,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
+        function insertar_registro() {
+            document.getElementById('frmNuevaVersion').src = 'nueva_version.html';
+            document.getElementById('bloqueo').style.visibility = 'visible';
+            document.getElementById('nuevo_poi').style.visibility = 'visible';
+            document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
+        }
 
+        function desbloquea_insertar_registro() {
+            document.getElementById('bloqueo').style.visibility = 'hidden';
+            document.getElementById('nuevo_poi').style.visibility = 'hidden';
+            document.getElementById('nuevo_poi_sombra').style.visibility = 'hidden';
+        }
+
+        function add(punto, distancia, atributos) {
+            document.getElementById('frm_tabla').contentWindow.add(punto, distancia, atributos);
+        }
+
+        function guardar() {
+            document.getElementById('frm_tabla').contentWindow.guardar();
+        }
     </script>
 </head>
 
@@ -13,13 +32,24 @@
     <div class="ui-layout-north">
         <table id='principal' style="width:100%;">
             <tr>
-                <td style="text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">UC PLANNER</td>
+                <td style="width:100%;text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">UC PLANNER</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">
+                    <table>
+                        <tr>
+                            <td class="proyecto" style="width:100%;">RUTA 99</td>
+                            <td class="proyecto" style="min-width:100px;"><button onclick="insertar_registro()">ADD</button></td>
+                            <td class="proyecto" style="min-width:100px;"><button onclick="guardar()">SAVE</button></td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
         </table>
     </div>
 
     <div class="ui-layout-center" style="color:black;text-align:center;">
-        <iframe style="width:100%;height:100%;border:1px solid black;" src="tabla.html"></iframe>
+        <iframe id="frm_tabla" style="width:100%;height:100%;border:1px solid black;" src="tabla.html"></iframe>
     </div>
 
     <div class="ui-layout-south" style="color:black;text-align:center;background-color: gainsboro;">
@@ -29,6 +59,12 @@
             </tr>
         </table>
     </div>
+
+    <div id="bloqueo"></div>
+
+    <div id="nuevo_poi"><iframe id="frmNuevaVersion" style="width:100%; height:100%"></iframe></div>
+
+    <div id="nuevo_poi_sombra"></div>
 </body>
 
 </html>

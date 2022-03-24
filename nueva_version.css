@@ -1,0 +1,7 @@
+.titulo {
+    background-color: darkred;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align:center;
+    border:1px solid white;
+  }
