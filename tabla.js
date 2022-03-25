@@ -1,8 +1,9 @@
+var pois;
 
-function recalcula(data) {
+function recalcula() {
     var distancia_anterior = 0; var lista = [];
     var i = 0;
-    $.each(data, function (key, value) {
+    $.each(pois, function (key, value) {
         if (i > 0) {
             var valor_distancia_anterior = value.distancia - distancia_anterior;
         }
@@ -25,7 +26,7 @@ function recalcula(data) {
 
 function carga() {
     var distancia_anterior = 0; var lista = [];
-    vector = $.getJSON('pois.json', function (data) {
+    pois = $.getJSON('pois.json', function (data) {
         var i = 0;
         $.each(data, function (key, value) {
             if (i > 0) {
@@ -34,11 +35,13 @@ function carga() {
             }
 
             lista[i] = {};
+            lista[i]._indice = i;
             lista[i].nombre_poi = value.nombre_poi;
             lista[i].distancia = value.distancia;
             if (i > 0) {
                 lista[i - 1].intervalo = valor_distancia_anterior.toFixed(1);
             }
+            lista[i].notas = value.notas;
             lista[i].atributos = value.atributos;
 
             distancia_anterior = parseInt(value.distancia);
@@ -51,14 +54,14 @@ function carga() {
         return lista;
     });
 
-    return vector;
+    return pois;
 }
 
-function muestra(vector) {
+function muestra() {
     $("#cuerpo_tabla tr").remove();
     var fila = '';
-    console.log(vector);
-    $.each(vector, function (key, value) {
+    console.log(pois);
+    $.each(pois, function (key, value) {
         fila += '<tr>';
         fila += '<td>' + value.nombre_poi + '</td>';
         fila += '<td>' + value.distancia + '</td>';
@@ -68,11 +71,42 @@ function muestra(vector) {
         else {
             fila += '<td>&nbsp;</td>';
         }
+        if (typeof value.notas !== "undefined") {
+            fila += '<td>' + value.notas + '</td>';
+        }
+        else {
+            fila += '<td>&nbsp</td>';
+        }
+
         fila += '<td>' + value.atributos + '</td>';
-        fila += '<td>&nbsp;</td>';
-        fila += '<td><button>B</button></td>';
+        fila += '<td><button onclick="borra(this,' + value._indice + ')">B</button></td>';
         fila += '</tr>';
     })
 
     $("#cuerpo_tabla").append(fila);
 }
+
+function borra(celda, indice) {
+    celda.parentNode.parentNode.style.display = 'none';
+
+    //console.log(pois.length);
+    //console.log('valor', pois);
+    var lista = []; var i = 0;
+    $.each(pois, function (key, value) {
+        if (value._indice != indice) {
+            console.log('encontrado', value._indice, indice, key)
+            lista[i] = pois[key];
+            i++;
+        }
+    });
+    pois = lista;
+    console.log('valor', pois);
+}
+
+/* function borra(vector, celda, indice) {
+    console.log(vector);
+    //celda.parentNode.parentNode.style.display = 'none';
+    //vector = vector.splice(indice, 1);
+    //console.log(vector);
+} */
+
