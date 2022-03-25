@@ -62,7 +62,7 @@ function muestra() {
     var fila = '';
     console.log(pois);
     $.each(pois, function (key, value) {
-        fila += '<tr>';
+        fila += '<tr class="fila" onmouseover="this.style.backgroundColor = \'#FFFACD\';" onmouseout="this.style.backgroundColor = \'white\';">';
         fila += '<td>' + value.nombre_poi + '</td>';
         fila += '<td>' + value.distancia + '</td>';
         if (typeof value.intervalo !== "undefined") {
