@@ -14,6 +14,8 @@ function recalcula() {
         if (i > 0) {
             lista[i - 1].intervalo = valor_distancia_anterior.toFixed(1);
         }
+        lista[i].notas = value.notas;
+
         lista[i].atributos = value.atributos;
 
         distancia_anterior = parseInt(value.distancia);
@@ -57,29 +59,80 @@ function carga() {
     return pois;
 }
 
+function set_nombre(o, indice) {
+    var resp = prompt("Texto", o.innerHTML);
+    if (!resp) return;
+
+    if ($.trim(resp) == '') {
+        alert("El texto no puede quedar vacío");
+        return;
+    }
+
+    o.innerHTML = resp;
+
+    $.each(pois, function (key, value) {
+        if (value._indice == indice) {
+            pois[key].nombre_poi = resp;
+        }
+    });
+}
+
+function set_notas(o, indice) {
+    var texto_actual = o.innerHTML;
+    if ($.trim(texto_actual) == '&nbsp') {
+        texto_actual = '';
+    }
+    var resp = prompt("Notas", texto_actual);
+    if (!resp) return;
+
+    if ($.trim(resp) == '') {
+        alert("El texto no puede quedar vacío");
+        return;
+    }
+
+    o.innerHTML = resp;
+
+    $.each(pois, function (key, value) {
+        if (value._indice == indice) {
+            pois[key].notas = resp;
+        }
+    });
+}
+
 function muestra() {
     $("#cuerpo_tabla tr").remove();
     var fila = '';
     console.log(pois);
     $.each(pois, function (key, value) {
         fila += '<tr class="fila" onmouseover="this.style.backgroundColor = \'#FFFACD\';" onmouseout="this.style.backgroundColor = \'white\';">';
-        fila += '<td>' + value.nombre_poi + '</td>';
+
+        fila += '<td onclick="set_nombre(this,' + value._indice + ');">' + value.nombre_poi + '</td>';
+
         fila += '<td>' + value.distancia + '</td>';
+
         if (typeof value.intervalo !== "undefined") {
             fila += '<td>' + value.intervalo + '</td>';
         }
         else {
             fila += '<td>&nbsp;</td>';
         }
+
         if (typeof value.notas !== "undefined") {
-            fila += '<td>' + value.notas + '</td>';
+            fila += '<td onclick="set_notas(this,' + value._indice + ');">' + value.notas + '</td>';
+        }
+        else {
+            fila += '<td onclick="set_notas(this,' + value._indice + ');">&nbsp</td>';
+        }
+
+        if (typeof value.atributos !== "undefined") {
+            fila += '<td>' + value.atributos + '</td>';
         }
         else {
             fila += '<td>&nbsp</td>';
         }
 
-        fila += '<td>' + value.atributos + '</td>';
         fila += '<td><button onclick="borra(this,' + value._indice + ')">B</button></td>';
+
         fila += '</tr>';
     })
 
@@ -102,11 +155,4 @@ function borra(celda, indice) {
     pois = lista;
     console.log('valor', pois);
 }
-
-/* function borra(vector, celda, indice) {
-    console.log(vector);
-    //celda.parentNode.parentNode.style.display = 'none';
-    //vector = vector.splice(indice, 1);
-    //console.log(vector);
-} */
 

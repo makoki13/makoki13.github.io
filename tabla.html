@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.2.4/jquery.floatThead.min.js" integrity="sha512-QhaSMfyPHtKHbg7e//C6Y/nmpflIM9PgmhZ/TR+BcbRaR9eYXzZRfuK5D9pnVlp+J5zWXu5ckVzX4ycOQy/jZA==" crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="tabla.js"></script>
-    <script>        
+    <script>
         function compare(a, b) {
             if (a.distancia < b.distancia) {
                 return -1;
@@ -19,12 +19,14 @@
         }
 
 
-        function add(nombre_poi, distancia, atributos) {
-            pois.push({ nombre_poi, distancia, atributos });
+        function add(nombre_poi, distancia, notas, atributos) {
+            pois.push({ nombre_poi, distancia, notas, atributos });
 
             pois.sort(compare);
 
             pois = recalcula(pois);
+
+            console.log(pois);
 
             muestra(pois);
 

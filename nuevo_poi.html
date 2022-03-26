@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="nuevo_poi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js"></script> -->
+
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
+
+    <script>
+        function salir() {
+            window.parent.desbloquea_insertar_registro();
+        }
+
+        function add() {
+            var punto = document.getElementById('nombre').value;
+            var distancia = parseFloat(document.getElementById('distancia').value);
+            var comentarios = document.getElementById('comentarios').value;
+            var lista_atributos = $(".chosen-select").val();
+
+            window.parent.add(punto, distancia, comentarios, lista_atributos);
+
+            document.getElementById('nombre').value = '';
+            document.getElementById('distancia').value = '';
+            document.getElementById('comentarios').value = '';
+
+            document.getElementById('nombre').focus();
+        }
+    </script>
+</head>
+
+<body onload="document.getElementById('nombre').focus();">
+    <table style="width:100%;height:100%;background-color: white;">
+        <tr>
+            <td class="titulo" style="width:100%;">NUEVO POI</td>
+        </tr>
+        <tr style="vertical-align: top;">
+            <td>
+                <table style="width:100%;height:100%;vertical-align: top;">
+                    <tr style="vertical-align: top;min-height: 70px;">
+                        <td class="etiqueta" style="min-width:80px;">Nombre</td>
+                        <td style="width:100%;">
+                            <input type="text" id="nombre" style="width:90%;" onfocus="this.style.backgroundColor='palegoldenrod';" onblur="this.style.backgroundColor='white';">
+                        </td>
+                    </tr>
+                    <tr style="min-height:70px;">
+                        <td class="etiqueta">Distancia</td>
+                        <td>
+                            <input type="number" id="distancia" style="width:100px;" onfocus="this.style.backgroundColor='palegoldenrod';" onblur="this.style.backgroundColor='white';">
+                        </td>
+                    </tr>
+                    <tr style="min-height:70px;">
+                        <td class="etiqueta">Comentarios</td>
+                        <td>
+                            <input type="text" id="comentarios" style="width:90%;" onfocus="this.style.backgroundColor='palegoldenrod';" onblur="this.style.backgroundColor='white';">
+                        </td>
+                    </tr>
+                    <tr style="height:100%;vertical-align: top;">
+                        <td class="etiqueta">Atributos</td>
+                        <td>
+                            <select id="atributos" style="width:90%;" data-placeholder="Seleccione uno o varios..." multiple class="chosen-select">
+                                <option value=""></option>
+                                <option>Inicio</option>
+                                <option>Población</option>
+                                <option>Inicio subida</option>
+                                <option>Fin subida</option>
+                                <option>Inicio bajada</option>
+                                <option>Fin bajada</option>
+                                <option>Comida</option>
+                                <option>Alojamiento</option>
+                                <option>Taller</option>
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr style="min-height:70px;">
+                        <td style="padding-top:10px;" colspan="2">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="width:50%;text-align: right;padding-right:10px;"><button onclick="add();">ADD</button></td>
+                                    <td style="width:50%;text-align: left;padding-left:10px;"><button onclick="salir();">EXIT</button></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        //$('select[multiple]').multiselect();
+        $(".chosen-select").chosen({
+            no_results_text: ""
+        })
+    </script>
+</body>
+
+</html>

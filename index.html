@@ -6,7 +6,7 @@
 
     <script>
         function insertar_registro() {
-            document.getElementById('frmNuevaVersion').src = 'nueva_version.html';
+            document.getElementById('frmNuevaVersion').src = 'nuevo_poi.html';
             document.getElementById('bloqueo').style.visibility = 'visible';
             document.getElementById('nuevo_poi').style.visibility = 'visible';
             document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
@@ -18,8 +18,8 @@
             document.getElementById('nuevo_poi_sombra').style.visibility = 'hidden';
         }
 
-        function add(punto, distancia, atributos) {
-            document.getElementById('frm_tabla').contentWindow.add(punto, distancia, atributos);
+        function add(punto, distancia, comentarios, atributos) {
+            document.getElementById('frm_tabla').contentWindow.add(punto, distancia, comentarios, atributos);
         }
 
         function guardar() {
