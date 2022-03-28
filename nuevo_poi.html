@@ -66,7 +66,7 @@
                         <td class="etiqueta">Atributos</td>
                         <td>
                             <select id="atributos" style="width:90%;" data-placeholder="Seleccione uno o varios..." multiple class="chosen-select">
-                                <option value=""></option>
+                                <option value="gasolinera">Gasolinera</option>
                                 <option value="inicio">Inicio</option>
                                 <option value="poblacion">Población</option>
                                 <option value="inicio_subida">Inicio subida</option>
@@ -111,7 +111,7 @@
             document.getElementById('nombre').value = nombre;
             document.getElementById('distancia').value = distancia;
             document.getElementById('comentarios').value = notas;
-            
+
             $.each(atributos, function (i, e) {
                 $('.chosen-select').multiselect('select', e);
             });
