@@ -25,6 +25,26 @@
         function guardar() {
             document.getElementById('frm_tabla').contentWindow.guardar();
         }
+
+        function edita_registro(control, indice) {
+            document.getElementById('frmNuevaVersion').src = 'nuevo_poi.html?edicion=S&indice=' + indice;
+            document.getElementById('bloqueo').style.visibility = 'visible';
+            document.getElementById('nuevo_poi').style.visibility = 'visible';
+            document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
+        }
+
+        function get_punto(indice) {
+            document.getElementById('frm_tabla').contentWindow.get_punto(indice);
+        }
+
+        function envia_punto(punto) {
+            var nombre = punto.nombre_poi;
+            var distancia = punto.distancia;
+            var notas = punto.notas;
+            var atributos = punto.atributos;
+
+            document.getElementById('frmNuevaVersion').contentWindow.set_valores_formulario(nombre, distancia, notas, atributos);
+        }
     </script>
 </head>
 

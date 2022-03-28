@@ -114,14 +114,11 @@ function set_distancia(o, indice) {
 
     $.each(pois, function (key, value) {
         if (value._indice == indice) {
-            console.log('encontrado', value._indice, indice, key)
             pois[key].distancia = resp;
         }
     });
 
     pois = recalcula(pois);
-
-    console.log('set_distancia', pois);
 
     muestra(pois);
 }
@@ -129,7 +126,6 @@ function set_distancia(o, indice) {
 function muestra() {
     $("#cuerpo_tabla tr").remove();
     var fila = '';
-    console.log(pois);
     $.each(pois, function (key, value) {
         fila += '<tr class="fila" onmouseover="this.style.backgroundColor = \'#FFFACD\';" onmouseout="this.style.backgroundColor = \'white\';">';
 
@@ -140,8 +136,6 @@ function muestra() {
                 clase_celda += 'atributo_' + value + ' ';
             });
         }
-
-        console.log('clase_Cel', clase_celda);
 
         fila += '<td class="' + clase_celda + '" onclick="set_nombre(this,' + value._indice + ');">' + value.nombre_poi + '</td>';
 
@@ -162,10 +156,10 @@ function muestra() {
         }
 
         if (typeof value.atributos !== "undefined") {
-            fila += '<td>' + value.atributos + '</td>';
+            fila += '<td onclick="edita_registro(this,' + value._indice + ')">' + value.atributos + '</td>';
         }
         else {
-            fila += '<td>&nbsp</td>';
+            fila += '<td onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';
         }
 
         fila += '<td><button onclick="borra(this,' + value._indice + ')">B</button></td>';
@@ -183,8 +177,6 @@ function add(nombre_poi, distancia, notas, atributos) {
 
     pois = recalcula(pois);
 
-    console.log(pois);
-
     muestra(pois);
 }
 
@@ -200,17 +192,17 @@ function guardar() {
 function borra(celda, indice) {
     celda.parentNode.parentNode.style.display = 'none';
 
-    //console.log(pois.length);
-    //console.log('valor', pois);
     var lista = []; var i = 0;
     $.each(pois, function (key, value) {
         if (value._indice != indice) {
-            console.log('encontrado', value._indice, indice, key)
             lista[i] = pois[key];
             i++;
         }
     });
     pois = lista;
-    console.log('valor', pois);
+}
+
+function edita_registro(o, indice) {
+    window.parent.edita_registro(o, indice);
 }
 

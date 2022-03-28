@@ -18,6 +18,13 @@
             return 0;
         }
 
+        function get_punto(indice) {
+            $.each(pois, function (key, value) {
+                if (value._indice == indice) {
+                    window.parent.envia_punto(pois[key]);
+                }
+            });
+        }
 
     </script>
 </head>

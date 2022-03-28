@@ -1,5 +1,6 @@
 [
   {
+    "_indice": 0,
     "nombre_poi": "Gandia",
     "distancia": 0,
     "atributos": [
@@ -8,6 +9,7 @@
     "intervalo": "17.4"
   },
   {
+    "_indice": 1,
     "nombre_poi": "Subida 1 (CP1)",
     "distancia": 17.4,
     "atributos": [
@@ -16,6 +18,7 @@
     "intervalo": "0.8"
   },
   {
+    "_indice": 2,
     "nombre_poi": "Gasolinera",
     "distancia": 17.8,
     "atributos": [
@@ -24,6 +27,7 @@
     "intervalo": "2.2"
   },
   {
+    "_indice": 3,
     "nombre_poi": "Fin CP1",
     "distancia": 19.2,
     "notas": "TEXTO DE 19.2",
@@ -33,6 +37,7 @@
     "intervalo": "1.6"
   },
   {
+    "_indice": 4,
     "nombre_poi": "Inicio CP2",
     "distancia": 20.6,
     "atributos": [
@@ -41,23 +46,26 @@
     "intervalo": "5.0"
   },
   {
+    "_indice": 5,
     "nombre_poi": "Punto 25",
     "distancia": 25,
     "notas": "Coment 25",
     "intervalo": "8.0"
   },
   {
+    "_indice": 6,
     "nombre_poi": "P33",
     "distancia": 33,
     "notas": "C33",
     "atributos": [
-      "población",
+      "poblacion",
       "comida",
       "taller"
     ],
     "intervalo": "2.0"
   },
   {
+    "_indice": 7,
     "nombre_poi": "Inicio Bajada",
     "distancia": 35,
     "notas": "",
@@ -67,6 +75,7 @@
     "intervalo": "3.0"
   },
   {
+    "_indice": 8,
     "nombre_poi": "Fin Bajada",
     "distancia": 38,
     "notas": "",
@@ -76,21 +85,19 @@
     "intervalo": "32.0"
   },
   {
-    "nombre_poi": "punto 50",
-    "distancia": "70",
-    "intervalo": "5.0"
-  },
-  {
+    "_indice": 10,
     "nombre_poi": "punto 75",
     "distancia": 75,
     "intervalo": "225.0"
   },
   {
+    "_indice": 11,
     "nombre_poi": "T2",
     "distancia": 300,
     "intervalo": "40.0"
   },
   {
+    "_indice": 12,
     "nombre_poi": "t3",
     "distancia": 340
   }
