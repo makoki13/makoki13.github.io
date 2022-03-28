@@ -31,8 +31,59 @@ body {
         width:90%;
         text-align: center;
         border:1px solid rebeccapurple;
+        background-color: blue;
+        color: white;
     }
 
     .fila {
         cursor: pointer;
     }
+
+    .atributo_inicio {
+        font-weight: bolder;
+        color: darkgreen;
+    }
+
+    .atributo_población {
+        font-weight: bolder;
+        color:black;
+    }
+
+    .atributo_inicio_subida {
+        background-color: darkred;
+        color: white;
+    }
+
+    .atributo_fin_subida {
+        color: darkred;
+        background-color: white;
+    }
+
+    .atributo_inicio_bajada {
+        background-color: green;
+        color: white;
+    }
+
+    .atributo_fin_bajada {
+        color: green;
+        background-color: white;
+    }
+
+    .atributo_comida {
+        color: black;
+        background-color: palegreen;
+    }
+
+    .atributo_alojamiento {
+        color: blue;
+        background-color: paleturquoise;
+    }
+
+    .atributo_taller {
+        color: red;
+        background-color: lightpink;
+    }
+
+
+
+

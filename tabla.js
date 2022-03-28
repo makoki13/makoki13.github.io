@@ -99,6 +99,33 @@ function set_notas(o, indice) {
     });
 }
 
+function set_distancia(o, indice) {
+    var distancia = o.innerHTML;
+
+    var resp = prompt("Distancia", distancia);
+    if (!resp) return;
+
+    if ($.trim(resp) == '') {
+        alert("El valor no puede quedar vacío");
+        return;
+    }
+
+    o.innerHTML = resp;
+
+    $.each(pois, function (key, value) {
+        if (value._indice == indice) {
+            console.log('encontrado', value._indice, indice, key)
+            pois[key].distancia = resp;
+        }
+    });
+
+    pois = recalcula(pois);
+
+    console.log('set_distancia', pois);
+
+    muestra(pois);
+}
+
 function muestra() {
     $("#cuerpo_tabla tr").remove();
     var fila = '';
@@ -106,9 +133,19 @@ function muestra() {
     $.each(pois, function (key, value) {
         fila += '<tr class="fila" onmouseover="this.style.backgroundColor = \'#FFFACD\';" onmouseout="this.style.backgroundColor = \'white\';">';
 
-        fila += '<td onclick="set_nombre(this,' + value._indice + ');">' + value.nombre_poi + '</td>';
+        var clase_celda = '';
+        if (typeof value.atributos !== "undefined") {
 
-        fila += '<td>' + value.distancia + '</td>';
+            $.each(value.atributos, function (key, value) {
+                clase_celda += 'atributo_' + value + ' ';
+            });
+        }
+
+        console.log('clase_Cel', clase_celda);
+
+        fila += '<td class="' + clase_celda + '" onclick="set_nombre(this,' + value._indice + ');">' + value.nombre_poi + '</td>';
+
+        fila += '<td onclick="set_distancia(this,' + value._indice + ')">' + value.distancia + '</td>';
 
         if (typeof value.intervalo !== "undefined") {
             fila += '<td>' + value.intervalo + '</td>';
@@ -138,6 +175,27 @@ function muestra() {
 
     $("#cuerpo_tabla").append(fila);
 }
+
+function add(nombre_poi, distancia, notas, atributos) {
+    pois.push({ nombre_poi, distancia, notas, atributos });
+
+    pois.sort(compare);
+
+    pois = recalcula(pois);
+
+    console.log(pois);
+
+    muestra(pois);
+}
+
+function guardar() {
+    var a = document.createElement("a");
+    var file = new Blob([JSON.stringify(pois, null, 2)], { type: 'text/plain' });
+    a.href = URL.createObjectURL(file);
+    a.download = 'pois.json';
+    a.click();
+}
+
 
 function borra(celda, indice) {
     celda.parentNode.parentNode.style.display = 'none';

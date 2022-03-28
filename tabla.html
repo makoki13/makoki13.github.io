@@ -19,32 +19,6 @@
         }
 
 
-        function add(nombre_poi, distancia, notas, atributos) {
-            pois.push({ nombre_poi, distancia, notas, atributos });
-
-            pois.sort(compare);
-
-            pois = recalcula(pois);
-
-            console.log(pois);
-
-            muestra(pois);
-
-
-            /* var a = document.createElement("a");
-            var file = new Blob([JSON.stringify(pois, null, 2)], { type: 'text/plain' });
-            a.href = URL.createObjectURL(file);
-            a.download = 'pois.json';
-            a.click(); */
-        }
-
-        function guardar() {
-            var a = document.createElement("a");
-            var file = new Blob([JSON.stringify(pois, null, 2)], { type: 'text/plain' });
-            a.href = URL.createObjectURL(file);
-            a.download = 'pois.json';
-            a.click();
-        }
     </script>
 </head>
 
