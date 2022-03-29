@@ -20,6 +20,9 @@
         }
 
         function add() {
+            if (edicion == 'S') {
+                window.parent.borra_punto(indice);
+            }
             var punto = document.getElementById('nombre').value;
             var distancia = parseFloat(document.getElementById('distancia').value);
             var comentarios = document.getElementById('comentarios').value;
@@ -27,11 +30,16 @@
 
             window.parent.add(punto, distancia, comentarios, lista_atributos);
 
+            if (edicion == 'S') {
+                salir();
+            }
+
             document.getElementById('nombre').value = '';
             document.getElementById('distancia').value = '';
             document.getElementById('comentarios').value = '';
 
             document.getElementById('nombre').focus();
+
         }
     </script>
 </head>
@@ -84,7 +92,7 @@
                         <td style="padding-top:10px;" colspan="2">
                             <table style="width:100%;">
                                 <tr>
-                                    <td style="width:50%;text-align: right;padding-right:10px;"><button onclick="add();">ADD</button></td>
+                                    <td style="width:50%;text-align: right;padding-right:10px;"><button id="btn_accion" onclick="add();">ADD</button></td>
                                     <td style="width:50%;text-align: left;padding-left:10px;"><button onclick="salir();">EXIT</button></td>
                                 </tr>
                             </table>
@@ -105,6 +113,8 @@
         if (edicion == 'S') {
             var indice = params.get("indice");
             window.parent.get_punto(indice);
+
+            document.getElementById('btn_accion').innerHTML = 'EDIT';
         }
 
         function set_valores_formulario(nombre, distancia, notas, atributos) {

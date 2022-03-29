@@ -9,6 +9,7 @@ body {
     text-shadow: 1px 1px 1px black;
     text-align:center;
     border:1px solid white;
+    text-align: center;
   }
 
   .proyecto {
@@ -21,6 +22,7 @@ body {
     border-spacing:0;
     border-style:hidden;
 }
+
     td{
         padding:0.25em;
         border:1px solid gainsboro;
@@ -41,14 +43,9 @@ body {
 
     .atributo_inicio {
         font-weight: bolder;
-        color: darkgreen;
+        color: black;
     }
-
-    .atributo_población {
-        font-weight: bolder;
-        color:black;
-    }
-
+    
     .atributo_inicio_subida {
         background-color: darkred;
         color: white;
@@ -69,21 +66,13 @@ body {
         background-color: white;
     }
 
-    .atributo_comida {
-        color: black;
-        background-color: palegreen;
+    .atributo_poblacion {
+        font-weight: bolder;
+        color:black;
     }
 
-    .atributo_alojamiento {
+    .atributo_comida, .atributo_alojamiento, .atributo_taller {
         color: blue;
-        background-color: paleturquoise;
+        background-color: white;
+        font-weight: bolder;
     }
-
-    .atributo_taller {
-        color: red;
-        background-color: lightpink;
-    }
-
-
-
-

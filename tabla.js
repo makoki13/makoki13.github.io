@@ -9,6 +9,7 @@ function recalcula() {
         }
 
         lista[i] = {};
+        lista[i]._indice = value._indice;
         lista[i].nombre_poi = value.nombre_poi;
         lista[i].distancia = value.distancia;
         if (i > 0) {
@@ -79,16 +80,8 @@ function set_nombre(o, indice) {
 
 function set_notas(o, indice) {
     var texto_actual = o.innerHTML;
-    if ($.trim(texto_actual) == '&nbsp') {
-        texto_actual = '';
-    }
     var resp = prompt("Notas", texto_actual);
     if (!resp) return;
-
-    if ($.trim(resp) == '') {
-        alert("El texto no puede quedar vacío");
-        return;
-    }
 
     o.innerHTML = resp;
 
@@ -112,11 +105,16 @@ function set_distancia(o, indice) {
 
     o.innerHTML = resp;
 
+    console.log(pois);
+
     $.each(pois, function (key, value) {
         if (value._indice == indice) {
+            console.log('KEY: ' + key + ' VALUE', value, 'INDICE: ' + indice, 'VALUE._INDICE: ' + value._indice);
             pois[key].distancia = resp;
         }
     });
+
+    //console.log(pois);
 
     pois = recalcula(pois);
 
@@ -130,14 +128,15 @@ function muestra() {
         fila += '<tr class="fila" onmouseover="this.style.backgroundColor = \'#FFFACD\';" onmouseout="this.style.backgroundColor = \'white\';">';
 
         var clase_celda = '';
-        if (typeof value.atributos !== "undefined") {
 
+        if (typeof value.atributos !== "undefined") {
             $.each(value.atributos, function (key, value) {
                 clase_celda += 'atributo_' + value + ' ';
             });
+
         }
 
-        fila += '<td class="' + clase_celda + '" onclick="set_nombre(this,' + value._indice + ');">' + value.nombre_poi + '</td>';
+        fila += '<td class="' + clase_celda + '" onclick="set_nombre(this,' + value._indice + ');">&nbsp;' + value.nombre_poi + '</td>';
 
         fila += '<td onclick="set_distancia(this,' + value._indice + ')">' + value.distancia + '</td>';
 
@@ -162,7 +161,7 @@ function muestra() {
             fila += '<td onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';
         }
 
-        fila += '<td><button onclick="borra(this,' + value._indice + ')">B</button></td>';
+        fila += '<td><button onclick="borra(' + value._indice + ')" style="color:white">B</button></td>';
 
         fila += '</tr>';
     })
@@ -189,8 +188,8 @@ function guardar() {
 }
 
 
-function borra(celda, indice) {
-    celda.parentNode.parentNode.style.display = 'none';
+function borra(indice) {
+    //celda.parentNode.parentNode.style.display = 'none';
 
     var lista = []; var i = 0;
     $.each(pois, function (key, value) {
@@ -200,6 +199,8 @@ function borra(celda, indice) {
         }
     });
     pois = lista;
+
+    muestra();
 }
 
 function edita_registro(o, indice) {
