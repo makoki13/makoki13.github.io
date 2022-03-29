@@ -16,7 +16,7 @@
     "atributos": [
       "inicio_subida"
     ],
-    "intervalo": "0.8"
+    "intervalo": "0.4"
   },
   {
     "_indice": 2,
@@ -26,7 +26,7 @@
     "atributos": [
       "gasolinera"
     ],
-    "intervalo": "2.2"
+    "intervalo": "1.4"
   },
   {
     "_indice": 3,
@@ -36,7 +36,7 @@
     "atributos": [
       "fin_subida"
     ],
-    "intervalo": "1.6"
+    "intervalo": "1.4"
   },
   {
     "_indice": 4,
@@ -45,7 +45,7 @@
     "atributos": [
       "inicio_subida"
     ],
-    "intervalo": "8.6"
+    "intervalo": "8.0"
   },
   {
     "_indice": 5,
@@ -55,7 +55,7 @@
     "atributos": [
       "fin_subida"
     ],
-    "intervalo": "3.7"
+    "intervalo": "3.1"
   },
   {
     "_indice": 6,
@@ -65,7 +65,7 @@
     "atributos": [
       "fin_bajada"
     ],
-    "intervalo": "1.1"
+    "intervalo": "0.4"
   },
   {
     "_indice": 7,
@@ -75,7 +75,7 @@
     "atributos": [
       "inicio_subida"
     ],
-    "intervalo": "0.4"
+    "intervalo": "0.3"
   },
   {
     "_indice": 8,
@@ -85,7 +85,7 @@
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "4.2"
+    "intervalo": "3.8"
   },
   {
     "_indice": 9,
@@ -95,7 +95,7 @@
     "atributos": [
       "fin_subida"
     ],
-    "intervalo": "0.4"
+    "intervalo": "0.2"
   },
   {
     "_indice": 10,
@@ -105,7 +105,7 @@
     "atributos": [
       "fin_subida"
     ],
-    "intervalo": "5.3"
+    "intervalo": "4.9"
   },
   {
     "_indice": 11,
@@ -114,6 +114,66 @@
     "notas": " ",
     "atributos": [
       "fin_bajada"
+    ],
+    "intervalo": "0.6"
+  },
+  {
+    "_indice": 12,
+    "nombre_poi": "CP4",
+    "distancia": 41.9,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.7"
+  },
+  {
+    "_indice": 13,
+    "nombre_poi": "Subida 3",
+    "distancia": 42.6,
+    "notas": "39.2\t40.6\t1.4\t00:08\t\t4.0%\t8.3%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "2.6"
+  },
+  {
+    "_indice": 14,
+    "nombre_poi": "Fin CP4",
+    "distancia": 45.2,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "1.5"
+  },
+  {
+    "_indice": 15,
+    "nombre_poi": "Castell de Castells",
+    "distancia": 46.7,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "0.2"
+  },
+  {
+    "_indice": 16,
+    "nombre_poi": "CP5",
+    "distancia": 46.9,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "3.2"
+  },
+  {
+    "_indice": 17,
+    "nombre_poi": "Fin subida 3",
+    "distancia": 50.1,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
     ]
   }
 ]

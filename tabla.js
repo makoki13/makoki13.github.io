@@ -5,7 +5,7 @@ function recalcula() {
     var i = 0;
     $.each(pois, function (key, value) {
         if (i > 0) {
-            var valor_distancia_anterior = value.distancia - distancia_anterior;
+            var valor_distancia_anterior = parseFloat(value.distancia) - parseFloat(distancia_anterior);
         }
 
         lista[i] = {};
@@ -19,7 +19,7 @@ function recalcula() {
 
         lista[i].atributos = value.atributos;
 
-        distancia_anterior = parseInt(value.distancia);
+        distancia_anterior = parseFloat(value.distancia);
 
         i++;
     })
@@ -29,7 +29,7 @@ function recalcula() {
 
 function carga() {
     var distancia_anterior = 0; var lista = [];
-    pois = $.getJSON('pois.json', function (data) {
+    pois = $.getJSON('ruta99.json', function (data) {
         var i = 0;
         $.each(data, function (key, value) {
             if (i > 0) {
@@ -47,7 +47,7 @@ function carga() {
             lista[i].notas = value.notas;
             lista[i].atributos = value.atributos;
 
-            distancia_anterior = parseInt(value.distancia);
+            distancia_anterior = parseFloat(value.distancia);
 
             i++;
         })
@@ -148,17 +148,17 @@ function muestra() {
         }
 
         if (typeof value.notas !== "undefined") {
-            fila += '<td onclick="set_notas(this,' + value._indice + ');">' + value.notas + '</td>';
+            fila += '<td class="notas" onclick="set_notas(this,' + value._indice + ');">' + value.notas + '</td>';
         }
         else {
-            fila += '<td onclick="set_notas(this,' + value._indice + ');">&nbsp</td>';
+            fila += '<td class="notas" onclick="set_notas(this,' + value._indice + ');">&nbsp</td>';
         }
 
         if (typeof value.atributos !== "undefined") {
-            fila += '<td onclick="edita_registro(this,' + value._indice + ')">' + value.atributos + '</td>';
+            fila += '<td class="atributos" onclick="edita_registro(this,' + value._indice + ')">' + value.atributos + '</td>';
         }
         else {
-            fila += '<td onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';
+            fila += '<td class="atributos" onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';
         }
 
         fila += '<td><button onclick="borra(' + value._indice + ')" style="color:white">B</button></td>';
