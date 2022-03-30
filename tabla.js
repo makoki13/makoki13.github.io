@@ -1,4 +1,5 @@
 var pois;
+var nom_fichero = 'ruta99.json';
 
 function recalcula() {
     var distancia_anterior = 0; var lista = [];
@@ -27,9 +28,9 @@ function recalcula() {
     return lista;
 }
 
-function carga() {
+function carga(fichero) {
     var distancia_anterior = 0; var lista = [];
-    pois = $.getJSON('ruta99.json', function (data) {
+    pois = $.getJSON(fichero, function (data) {
         var i = 0;
         $.each(data, function (key, value) {
             if (i > 0) {
@@ -187,7 +188,7 @@ function guardar() {
     var a = document.createElement("a");
     var file = new Blob([JSON.stringify(pois, null, 2)], { type: 'text/plain' });
     a.href = URL.createObjectURL(file);
-    a.download = 'pois.json';
+    a.download = nom_fichero;
     a.click();
 }
 
