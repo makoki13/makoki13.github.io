@@ -155,7 +155,11 @@ function muestra() {
         }
 
         if (typeof value.atributos !== "undefined") {
-            fila += '<td class="atributos" onclick="edita_registro(this,' + value._indice + ')">' + value.atributos + '</td>';
+            var clase_cero = '';
+            if (value.atributos.length == 0) {
+                clase_cero = 'cero';
+            }
+            fila += '<td class="atributos ' + clase_cero + '" onclick="edita_registro(this,' + value._indice + ')">' + value.atributos.length + '</td>';
         }
         else {
             fila += '<td class="atributos" onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';

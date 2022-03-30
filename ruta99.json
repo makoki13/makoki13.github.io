@@ -312,6 +312,223 @@
     "atributos": [
       "poblacion",
       "inicio_bajada"
+    ],
+    "intervalo": "1.1"
+  },
+  {
+    "nombre_poi": "Fin bajada 5 / CP7",
+    "distancia": 69.1,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.7"
+  },
+  {
+    "nombre_poi": "Fin CP 7 / Inicio Bajada 6",
+    "distancia": 69.8,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "0.8"
+  },
+  {
+    "nombre_poi": "Millena",
+    "distancia": 70.6,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "1.4"
+  },
+  {
+    "nombre_poi": "CP8",
+    "distancia": 72,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.9"
+  },
+  {
+    "nombre_poi": "Fin CP8 / Inicio bajada 7",
+    "distancia": 72.9,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "1.3"
+  },
+  {
+    "nombre_poi": "Benillup / Fin bajada 7",
+    "distancia": 74.2,
+    "notas": "",
+    "atributos": [
+      "poblacion",
+      "fin_bajada"
+    ],
+    "intervalo": "1.2"
+  },
+  {
+    "nombre_poi": "Inicio Subida 8",
+    "distancia": 75.4,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "2.4"
+  },
+  {
+    "nombre_poi": "Benimarfull",
+    "distancia": 77.8,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "1.9"
+  },
+  {
+    "nombre_poi": "Fin Subida 8",
+    "distancia": 79.7,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "0.2"
+  },
+  {
+    "nombre_poi": "Inicio CP9",
+    "distancia": 79.9,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.7"
+  },
+  {
+    "nombre_poi": "Alcocer de Planes",
+    "distancia": 80.6,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "1.1"
+  },
+  {
+    "nombre_poi": "Fin CP9",
+    "distancia": 81.7,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "0.5"
+  },
+  {
+    "nombre_poi": "Gayanes (Fte)",
+    "distancia": 82.2,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "2.5"
+  },
+  {
+    "nombre_poi": "Inicio Subida 5",
+    "distancia": 84.7,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.5"
+  },
+  {
+    "nombre_poi": "Beniarrés",
+    "distancia": 85.2,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "0.6"
+  },
+  {
+    "nombre_poi": "Inicio CP10",
+    "distancia": 85.8,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "4.4"
+  },
+  {
+    "nombre_poi": "Fin CP10",
+    "distancia": 90.2,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "0.5"
+  },
+  {
+    "nombre_poi": "Fin Subida 5",
+    "distancia": 90.7,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "0.2"
+  },
+  {
+    "nombre_poi": "Inicio Bajada 9",
+    "distancia": 90.9,
+    "notas": "",
+    "atributos": [
+      "inicio_bajada"
+    ],
+    "intervalo": "4.1"
+  },
+  {
+    "nombre_poi": "Salem",
+    "distancia": 95,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "3.1"
+  },
+  {
+    "nombre_poi": "Fin Bajada 9",
+    "distancia": 98.1,
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
+    ],
+    "intervalo": "0.4"
+  },
+  {
+    "nombre_poi": "Inicio Subida 6",
+    "distancia": 98.5,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.3"
+  },
+  {
+    "nombre_poi": "Inicio CP11",
+    "distancia": 98.8,
+    "notas": "",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.1"
+  },
+  {
+    "nombre_poi": "Rafel de Salem",
+    "distancia": 98.9,
+    "notas": "",
+    "atributos": [
+      "poblacion"
     ]
   }
 ]

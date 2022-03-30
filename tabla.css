@@ -56,7 +56,7 @@ body {
     }
     
     .atributo_inicio_subida {
-        background-color: darkred;
+        background-color: #FF6666;
         color: white;
     }
 
@@ -66,8 +66,8 @@ body {
     }
 
     .atributo_inicio_bajada {
-        background-color: green;
-        color: white;
+        background-color: #66FF66;
+        color: black;
     }
 
     .atributo_fin_bajada {
@@ -84,4 +84,8 @@ body {
         color: blue;
         background-color: white;
         font-weight: bolder;
+    }
+
+    .cero {
+        background-color: pink;
     }
