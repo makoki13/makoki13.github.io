@@ -1,5 +1,5 @@
 var pois;
-var nom_fichero = 'ruta99.json';
+var nom_fichero = '';
 
 function recalcula() {
     var distancia_anterior = 0; var lista = [];
@@ -57,6 +57,8 @@ function carga(fichero) {
     }).then(function (data) {
         return lista;
     });
+
+    console.log('pois nuevo', pois);
 
     return pois;
 }

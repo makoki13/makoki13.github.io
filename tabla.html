@@ -44,14 +44,18 @@
         <tbody id="cuerpo_tabla"></tbody>
     </table>
     <script>
-        carga(nom_fichero).then(function (returndata) {
-            pois = returndata;
-            muestra(pois);
+        function cargar_fichero(nombre_fichero) {
+            console.log('cargar_fichero', nombre_fichero);
+            nom_fichero = nombre_fichero;
+            carga(nom_fichero).then(function (returndata) {
+                pois = returndata;
+                muestra(pois);
 
-            $('#principal').floatThead();
+                $('#principal').floatThead();
 
-            window.parent.document.getElementById('fichero').innerHTML = nom_fichero;
-        });
+                window.parent.document.getElementById('fichero').innerHTML = nom_fichero;
+            });
+        }
 
     </script>
 </body>

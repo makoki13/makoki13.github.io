@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script src="FileSaver.min.js"></script>
+
     <script>
         function insertar_registro() {
             document.getElementById('frmNuevaVersion').src = 'nuevo_poi.html';
@@ -49,6 +51,52 @@
         function borra_punto(indice) {
             document.getElementById('frm_tabla').contentWindow.borra(indice);
         }
+
+        function cargar_fichero(o) {
+            var nombre_fichero = o.files[0].name;
+            console.log('cargar_fichero index', nombre_fichero);
+            document.getElementById('frm_tabla').contentWindow.cargar_fichero(nombre_fichero);
+        }
+
+
+        var nombre_nuevo_fichero = '';
+
+        /* function existe_fichero() {
+            var img = new Image();
+            img.src = nombre_nuevo_fichero;
+            console.log('existe fichero', img.height);
+
+        } */
+
+        function crea_fichero() {
+            var resp = prompt("Stage name: ");
+            if (!resp) return;
+
+            nombre_nuevo_fichero = resp + '.json'
+
+            var file = new File(["[]"], nombre_nuevo_fichero, { type: "application/json" });
+            saveAs(file);
+
+            /* var blob = new Blob(["[]"], { type: 'application/json' });
+
+            saveAs(blob, nombre_nuevo_fichero); */
+
+            //var generatedFile = new File(["Rough Draft ...."], nombre_nuevo_fichero, { type: "text/plain" })
+            //console.log(generatedFile);
+
+            /* var cadena = JSON.stringify('[]');
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cadena));
+            element.setAttribute('download', nombre_nuevo_fichero);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+
+             */
+
+            //setInterval(existe_fichero, 1000);
+        }
     </script>
 </head>
 
@@ -63,6 +111,12 @@
                     <table>
                         <tr>
                             <td id="fichero" class="proyecto" style="width:100%;"></td>
+                            <td class="proyecto" style="min-width:100px;"><button onclick="crea_fichero()">NEW FILE</button></td>
+                            <td class="proyecto" style="min-width:100px;">
+                                <button onclick="$('#file-input').trigger('click');">LOAD FILE</button>
+                                <input id="file-input" type="file" name="name" style="display: none;" onchange="cargar_fichero(this)" />
+                            </td>
+                            <td class="proyecto" style="min-width:2px;width:2px;background-color: white;">&nbsp;</td>
                             <td class="proyecto" style="min-width:100px;"><button onclick="insertar_registro()">ADD</button></td>
                             <td class="proyecto" style="min-width:100px;"><button onclick="guardar()">SAVE</button></td>
                         </tr>

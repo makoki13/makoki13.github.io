@@ -80,10 +80,9 @@ body {
         color:black;
     }
 
-    .atributo_comida, .atributo_alojamiento, .atributo_taller {
+    .atributo_comida, .atributo_alojamiento, .atributo_taller, .atributo_gasolinera {
         color: blue;
-        background-color: white;
-        font-weight: bolder;
+        background-color: paleturquoise;
     }
 
     .cero {

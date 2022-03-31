@@ -1,0 +1,221 @@
+[
+  {
+    "_indice": 0,
+    "nombre_poi": "Benillup",
+    "distancia": 0,
+    "notas": "",
+    "atributos": [
+      "inicio"
+    ],
+    "intervalo": "3.6"
+  },
+  {
+    "_indice": 1,
+    "nombre_poi": "Benimarfull",
+    "distancia": 3.6,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "2.8"
+  },
+  {
+    "_indice": 2,
+    "nombre_poi": "Alcocer de Planes",
+    "distancia": 6.4,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "1.6"
+  },
+  {
+    "nombre_poi": "Gayanes (Fte)",
+    "distancia": 8,
+    "notas": "",
+    "atributos": [
+      "poblacion",
+      "comida"
+    ],
+    "intervalo": "3.0"
+  },
+  {
+    "_indice": 4,
+    "nombre_poi": "Beniarrés",
+    "distancia": 11,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "9.8"
+  },
+  {
+    "_indice": 5,
+    "nombre_poi": "Salem",
+    "distancia": 20.8,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "3.9"
+  },
+  {
+    "_indice": 6,
+    "nombre_poi": "Rafel de Salem",
+    "distancia": 24.7,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "3.4"
+  },
+  {
+    "_indice": 7,
+    "nombre_poi": "Beniatjar",
+    "distancia": 28.1,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "7.6"
+  },
+  {
+    "_indice": 8,
+    "nombre_poi": "Carricola",
+    "distancia": 35.7,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "2.9"
+  },
+  {
+    "_indice": 9,
+    "nombre_poi": "Belgida",
+    "distancia": 38.6,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "6.0"
+  },
+  {
+    "_indice": 10,
+    "nombre_poi": "Montaverner",
+    "distancia": 44.6,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "2.1"
+  },
+  {
+    "nombre_poi": "Alfarrasi (Gas)",
+    "distancia": 46.7,
+    "notas": "",
+    "atributos": [
+      "gasolinera",
+      "poblacion"
+    ],
+    "intervalo": "2.5"
+  },
+  {
+    "_indice": 12,
+    "nombre_poi": "Benisuera",
+    "distancia": 49.2,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "0.6"
+  },
+  {
+    "_indice": 13,
+    "nombre_poi": "Sempere",
+    "distancia": 49.8,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "0.7"
+  },
+  {
+    "_indice": 14,
+    "nombre_poi": "Guadassequies",
+    "distancia": 50.5,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "3.1"
+  },
+  {
+    "_indice": 15,
+    "nombre_poi": "Bellús",
+    "distancia": 53.6,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "10.5"
+  },
+  {
+    "nombre_poi": "Xativa (Fte)",
+    "distancia": 64.1,
+    "notas": "",
+    "atributos": [
+      "poblacion",
+      "comida"
+    ],
+    "intervalo": "1.0"
+  },
+  {
+    "_indice": 17,
+    "nombre_poi": "Xátiva (Gas)",
+    "distancia": 65.1,
+    "notas": "",
+    "atributos": [
+      "gasolinera"
+    ],
+    "intervalo": "7.0"
+  },
+  {
+    "_indice": 18,
+    "nombre_poi": "Manuel",
+    "distancia": 72.1,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "3.3"
+  },
+  {
+    "_indice": 19,
+    "nombre_poi": "Castelló",
+    "distancia": 75.4,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "intervalo": "6.3"
+  },
+  {
+    "nombre_poi": "Alberic (Gas)",
+    "distancia": 81.7,
+    "notas": "",
+    "atributos": [
+      "gasolinera",
+      "poblacion"
+    ],
+    "intervalo": "12.4"
+  },
+  {
+    "_indice": 21,
+    "nombre_poi": "Carlet",
+    "distancia": 94.1,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ]
+  }
+]
