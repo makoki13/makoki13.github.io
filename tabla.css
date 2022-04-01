@@ -1,95 +1,102 @@
 body {
     background-color: white;
-    margin:0px;padding:0px;
-  }
-
-  th {
-    background-color: darkred;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    text-align:center;
-    border:1px solid white;
-    text-align: center;
-  }
-
-  .proyecto {
-      font-size: 36px;
-  }
-
-  table{
-    table-layout:fixed;
-    border-collapse:collapse;
-    border-spacing:0;
-    border-style:hidden;
+    margin: 0px;
+    padding: 0px;
 }
 
-    td{
-        padding:0.25em;
-        border:1px solid gainsboro;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 14px;
-        text-align: right;padding-right: 3px;
-    }
+th {
+    background-color: pink;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    text-align: center;
+    border: 1px solid white;
+    text-align: center;
+}
 
-    .notas {
-        text-align: left;padding-left: 3px;
-    }
+.proyecto {
+    font-size: 36px;
+}
 
-    .atributos {
-        text-align: center;
-    }
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-style: hidden;
+}
 
-    button {
-        width:90%;
-        text-align: center;
-        border:1px solid rebeccapurple;
-        background-color: blue;
-        color: white;
-    }
+td {
+    padding: 0.25em;
+    border: 1px solid gainsboro;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 3px;
+}
 
-    .fila {
-        cursor: pointer;
-    }
+.notas {
+    text-align: left;
+    padding-left: 3px;
+}
 
-    .atributo_inicio {
-        font-weight: bolder;
-        color: black;
-    }
-    
-    .atributo_inicio_subida {
-        background-color: #FF6666;
-        color: white;
-    }
+.atributos {
+    text-align: center;
+}
 
-    .atributo_fin_subida {
-        color: darkred;
-        background-color: white;
-    }
+button {
+    width: 90%;
+    text-align: center;
+    border: 1px solid rebeccapurple;
+    background-color: blue;
+    color: white;
+}
 
-    .atributo_inicio_bajada {
-        background-color: #66FF66;
-        color: black;
-    }
+.fila {
+    cursor: pointer;
+}
 
-    .atributo_fin_bajada {
-        color: green;
-        background-color: white;
-    }
+.atributo_inicio {
+    font-weight: bolder;
+    color: black;
+}
 
-    .atributo_poblacion {
-        font-weight: bolder;
-        color:black;
-    }
+.atributo_inicio_subida {
+    background-color: #FF6666;
+    color: white;
+}
 
-    .atributo_comida, .atributo_alojamiento, .atributo_taller, .atributo_gasolinera {
-        color: blue;
-        background-color: paleturquoise;
-    }
+.atributo_fin_subida {
+    color: darkred;
+    background-color: white;
+}
 
-    .atributo_incidencia {        
-        color:black;
-        font-style: italic;
-    }
+.atributo_inicio_bajada {
+    background-color: #66FF66;
+    color: black;
+}
 
-    .cero {
-        background-color: pink;
-    }
+.atributo_fin_bajada {
+    color: green;
+    background-color: white;
+}
+
+.atributo_poblacion {
+    font-weight: bolder;
+    color: black;
+}
+
+.atributo_comida,
+.atributo_alojamiento,
+.atributo_taller,
+.atributo_gasolinera {
+    color: blue;
+    background-color: paleturquoise;
+}
+
+.atributo_incidencia {
+    color: black;
+    font-style: italic;
+}
+
+.cero {
+    background-color: pink;
+}
