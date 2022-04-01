@@ -30,6 +30,7 @@
     "intervalo": "1.6"
   },
   {
+    "_indice": 3,
     "nombre_poi": "Gayanes (Fte)",
     "distancia": 8,
     "notas": "",
@@ -37,7 +38,14 @@
       "poblacion",
       "comida"
     ],
-    "intervalo": "3.0"
+    "intervalo": "2.5"
+  },
+  {
+    "nombre_poi": "Inicio Subida 1",
+    "distancia": 10.5,
+    "notas": "6.0\t00:33\t0.81\t3.8%\t18.2%",
+    "atributos": [],
+    "intervalo": "0.5"
   },
   {
     "_indice": 4,
@@ -47,7 +55,14 @@
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "9.8"
+    "intervalo": "5.5"
+  },
+  {
+    "nombre_poi": "Fin Subida 1",
+    "distancia": 16.5,
+    "notas": "",
+    "atributos": [],
+    "intervalo": "4.3"
   },
   {
     "_indice": 5,
@@ -57,7 +72,14 @@
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "3.9"
+    "intervalo": "3.5"
+  },
+  {
+    "nombre_poi": "Inicio Subida 2",
+    "distancia": 24.3,
+    "notas": "2.6\t00:16\t0.76\t5.1%\t14.4%",
+    "atributos": [],
+    "intervalo": "0.4"
   },
   {
     "_indice": 6,
@@ -67,7 +89,14 @@
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "3.4"
+    "intervalo": "2.2"
+  },
+  {
+    "nombre_poi": "Fin Subida 2",
+    "distancia": 26.9,
+    "notas": "",
+    "atributos": [],
+    "intervalo": "1.2"
   },
   {
     "_indice": 7,
@@ -97,7 +126,21 @@
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "6.0"
+    "intervalo": "0.6"
+  },
+  {
+    "nombre_poi": "Inicio Subida 3",
+    "distancia": 39.2,
+    "notas": "1.4\t00:08\t\t4.0%\t8.3%",
+    "atributos": [],
+    "intervalo": "1.4"
+  },
+  {
+    "nombre_poi": "Fin Subida 3",
+    "distancia": 40.6,
+    "notas": "",
+    "atributos": [],
+    "intervalo": "4.0"
   },
   {
     "_indice": 10,
@@ -110,6 +153,7 @@
     "intervalo": "2.1"
   },
   {
+    "_indice": 11,
     "nombre_poi": "Alfarrasi (Gas)",
     "distancia": 46.7,
     "notas": "",
@@ -157,9 +201,38 @@
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "10.5"
+    "intervalo": "0.5"
   },
   {
+    "nombre_poi": "Inicio Subida 4",
+    "distancia": 54.1,
+    "notas": "2.3\t00:15\t0.71\t5.2%\t12.8%",
+    "atributos": [],
+    "intervalo": "2.3"
+  },
+  {
+    "nombre_poi": "Fin Subida 4",
+    "distancia": 56.4,
+    "notas": "",
+    "atributos": [],
+    "intervalo": "4.3"
+  },
+  {
+    "nombre_poi": "Inicio Subida 5",
+    "distancia": 60.7,
+    "notas": "1.2\t00:07\t\t4.5%\t7.3%",
+    "atributos": [],
+    "intervalo": "1.2"
+  },
+  {
+    "nombre_poi": "Fin Subida 5",
+    "distancia": 61.9,
+    "notas": "",
+    "atributos": [],
+    "intervalo": "2.2"
+  },
+  {
+    "_indice": 16,
     "nombre_poi": "Xativa (Fte)",
     "distancia": 64.1,
     "notas": "",
@@ -200,6 +273,7 @@
     "intervalo": "6.3"
   },
   {
+    "_indice": 20,
     "nombre_poi": "Alberic (Gas)",
     "distancia": 81.7,
     "notas": "",
