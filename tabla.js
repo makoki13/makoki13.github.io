@@ -11,7 +11,7 @@ function recalcula() {
         }
 
         lista[i] = {};
-        lista[i]._indice = value._indice;
+        lista[i]._indice = i;
         lista[i].nombre_poi = value.nombre_poi;
         lista[i].distancia = value.distancia;
         if (i > 0) {
@@ -36,7 +36,6 @@ function carga(fichero) {
         $.each(data, function (key, value) {
             if (i > 0) {
                 var valor_distancia_anterior = value.distancia - distancia_anterior;
-                var fila_anterior = "" + (i - 1);
             }
 
             lista[i] = {};
@@ -184,6 +183,8 @@ function add(_indice, nombre_poi, distancia, notas, atributos) {
     pois.sort(compare);
 
     pois = recalcula(pois);
+
+    console.log(pois);
 
     muestra(pois);
 }

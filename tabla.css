@@ -85,6 +85,11 @@ body {
         background-color: paleturquoise;
     }
 
+    .atributo_incidencia {        
+        color:black;
+        font-style: italic;
+    }
+
     .cero {
         background-color: pink;
     }
