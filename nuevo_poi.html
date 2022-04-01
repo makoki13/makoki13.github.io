@@ -9,38 +9,27 @@
     <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
     <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="nuevo_poi.js"></script>
 
     <script>
-        var nombre = '';
-        var distancia = 0;
-        var notas = '';
+        var params = (new URL(document.location)).searchParams;
 
-        function salir() {
-            window.parent.desbloquea_insertar_registro();
-        }
+        $(function () {
+            $(".chosen-select").chosen({
+                no_results_text: ""
+            });
 
-        function add() {
+
+            edicion = params.get("edicion");
+            console.log("edicion: " + edicion);
             if (edicion == 'S') {
-                window.parent.borra_punto(indice);
+                indice = params.get("indice");
+                console.log("indice: " + indice);
+                window.parent.get_punto(indice);
+
+                document.getElementById('btn_accion').innerHTML = 'EDIT';
             }
-            var punto = document.getElementById('nombre').value;
-            var distancia = parseFloat(document.getElementById('distancia').value);
-            var comentarios = document.getElementById('comentarios').value;
-            var lista_atributos = $(".chosen-select").val();
-
-            window.parent.add(punto, distancia, comentarios, lista_atributos);
-
-            if (edicion == 'S') {
-                salir();
-            }
-
-            document.getElementById('nombre').value = '';
-            document.getElementById('distancia').value = '';
-            document.getElementById('comentarios').value = '';
-
-            document.getElementById('nombre').focus();
-
-        }
+        });
     </script>
 </head>
 
@@ -102,33 +91,6 @@
             </td>
         </tr>
     </table>
-
-    <script>
-        $(".chosen-select").chosen({
-            no_results_text: ""
-        })
-
-        var params = (new URL(document.location)).searchParams;
-        edicion = params.get("edicion");
-        if (edicion == 'S') {
-            var indice = params.get("indice");
-            window.parent.get_punto(indice);
-
-            document.getElementById('btn_accion').innerHTML = 'EDIT';
-        }
-
-        function set_valores_formulario(nombre, distancia, notas, atributos) {
-            document.getElementById('nombre').value = nombre;
-            document.getElementById('distancia').value = distancia;
-            document.getElementById('comentarios').value = notas;
-
-            $.each(atributos, function (i, e) {
-                $('.chosen-select').multiselect('select', e);
-            });
-            $('.chosen-select').multiselect('refresh');
-
-        }
-    </script>
 </body>
 
 </html>

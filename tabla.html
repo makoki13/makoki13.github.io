@@ -7,26 +7,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.2.4/jquery.floatThead.min.js" integrity="sha512-QhaSMfyPHtKHbg7e//C6Y/nmpflIM9PgmhZ/TR+BcbRaR9eYXzZRfuK5D9pnVlp+J5zWXu5ckVzX4ycOQy/jZA==" crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="tabla.js"></script>
-    <script>
-        function compare(a, b) {
-            if (a.distancia < b.distancia) {
-                return -1;
-            }
-            if (a.distancia > b.distancia) {
-                return 1;
-            }
-            return 0;
-        }
-
-        function get_punto(indice) {
-            $.each(pois, function (key, value) {
-                if (value._indice == indice) {
-                    window.parent.envia_punto(pois[key]);
-                }
-            });
-        }
-
-    </script>
 </head>
 
 <body>
@@ -43,21 +23,6 @@
         </thead>
         <tbody id="cuerpo_tabla"></tbody>
     </table>
-    <script>
-        function cargar_fichero(nombre_fichero) {
-            console.log('cargar_fichero', nombre_fichero);
-            nom_fichero = nombre_fichero;
-            carga(nom_fichero).then(function (returndata) {
-                pois = returndata;
-                muestra(pois);
-
-                $('#principal').floatThead();
-
-                window.parent.document.getElementById('fichero').innerHTML = nom_fichero;
-            });
-        }
-
-    </script>
 </body>
 
 </html>

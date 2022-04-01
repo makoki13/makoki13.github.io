@@ -2,6 +2,7 @@ var pois;
 var nom_fichero = '';
 
 function recalcula() {
+    console.log('recalcula');
     var distancia_anterior = 0; var lista = [];
     var i = 0;
     $.each(pois, function (key, value) {
@@ -125,6 +126,7 @@ function set_distancia(o, indice) {
 }
 
 function muestra() {
+    console.log('muestra');
     $("#cuerpo_tabla tr").remove();
     var fila = '';
     $.each(pois, function (key, value) {
@@ -176,8 +178,8 @@ function muestra() {
     $("#cuerpo_tabla").append(fila);
 }
 
-function add(nombre_poi, distancia, notas, atributos) {
-    pois.push({ nombre_poi, distancia, notas, atributos });
+function add(_indice, nombre_poi, distancia, notas, atributos) {
+    pois.push({ _indice, nombre_poi, distancia, notas, atributos });
 
     pois.sort(compare);
 
@@ -207,10 +209,45 @@ function borra(indice) {
     });
     pois = lista;
 
+    console.log(pois);
+
     muestra();
 }
 
 function edita_registro(o, indice) {
+    console.log('indice', indice);
     window.parent.edita_registro(o, indice);
 }
+
+function compare(a, b) {
+    if (a.distancia < b.distancia) {
+        return -1;
+    }
+    if (a.distancia > b.distancia) {
+        return 1;
+    }
+    return 0;
+}
+
+function get_punto(indice) {
+    $.each(pois, function (key, value) {
+        if (value._indice == indice) {
+            window.parent.envia_punto(pois[key]);
+        }
+    });
+}
+
+function cargar_fichero(nombre_fichero) {
+    console.log('cargar_fichero', nombre_fichero);
+    nom_fichero = nombre_fichero;
+    carga(nom_fichero).then(function (returndata) {
+        pois = returndata;
+        muestra(pois);
+
+        $('#principal').floatThead();
+
+        window.parent.document.getElementById('fichero').innerHTML = nom_fichero;
+    });
+}
+
 

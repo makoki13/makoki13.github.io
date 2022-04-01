@@ -5,102 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="FileSaver.min.js"></script>
-
-    <script>
-        function insertar_registro() {
-            document.getElementById('frmNuevaVersion').src = 'nuevo_poi.html';
-            document.getElementById('bloqueo').style.visibility = 'visible';
-            document.getElementById('nuevo_poi').style.visibility = 'visible';
-            document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
-        }
-
-        function desbloquea_insertar_registro() {
-            document.getElementById('bloqueo').style.visibility = 'hidden';
-            document.getElementById('nuevo_poi').style.visibility = 'hidden';
-            document.getElementById('nuevo_poi_sombra').style.visibility = 'hidden';
-        }
-
-        function add(punto, distancia, comentarios, atributos) {
-            document.getElementById('frm_tabla').contentWindow.add(punto, distancia, comentarios, atributos);
-        }
-
-        function guardar() {
-            document.getElementById('frm_tabla').contentWindow.guardar();
-        }
-
-        function edita_registro(control, indice) {
-            document.getElementById('frmNuevaVersion').src = 'nuevo_poi.html?edicion=S&indice=' + indice;
-            document.getElementById('bloqueo').style.visibility = 'visible';
-            document.getElementById('nuevo_poi').style.visibility = 'visible';
-            document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
-        }
-
-        function get_punto(indice) {
-            document.getElementById('frm_tabla').contentWindow.get_punto(indice);
-        }
-
-        function envia_punto(punto) {
-            var nombre = punto.nombre_poi;
-            var distancia = punto.distancia;
-            var notas = punto.notas;
-            var atributos = punto.atributos;
-
-            document.getElementById('frmNuevaVersion').contentWindow.set_valores_formulario(nombre, distancia, notas, atributos);
-        }
-
-        function borra_punto(indice) {
-            document.getElementById('frm_tabla').contentWindow.borra(indice);
-        }
-
-        function cargar_fichero(o) {
-            console.log(o.files);
-            var nombre_fichero = o.files[0].name;
-            console.log('cargar_fichero index', nombre_fichero);
-            document.getElementById('frm_tabla').contentWindow.cargar_fichero(nombre_fichero);
-            document.getElementById('btn_course_add').style.visibility = 'visible';
-            document.getElementById('btn_course_save').style.visibility = 'visible';
-        }
-
-
-        var nombre_nuevo_fichero = '';
-
-        /* function existe_fichero() {
-            var img = new Image();
-            img.src = nombre_nuevo_fichero;
-            console.log('existe fichero', img.height);
-
-        } */
-
-        function crea_fichero() {
-            var resp = prompt("Stage name: ");
-            if (!resp) return;
-
-            nombre_nuevo_fichero = resp + '.json'
-
-            var file = new File(["[]"], nombre_nuevo_fichero, { type: "application/json" });
-            saveAs(file);
-
-            /* var blob = new Blob(["[]"], { type: 'application/json' });
-
-            saveAs(blob, nombre_nuevo_fichero); */
-
-            //var generatedFile = new File(["Rough Draft ...."], nombre_nuevo_fichero, { type: "text/plain" })
-            //console.log(generatedFile);
-
-            /* var cadena = JSON.stringify('[]');
-            var element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cadena));
-            element.setAttribute('download', nombre_nuevo_fichero);
-
-            element.style.display = 'none';
-            document.body.appendChild(element);
-            element.click();
-
-             */
-
-            //setInterval(existe_fichero, 1000);
-        }
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
@@ -137,14 +42,6 @@
     <div class="ui-layout-center" style="color:black;text-align:center;">
         <iframe id="frm_tabla" style="width:100%;height:100%;border:1px solid black;" src="tabla.html"></iframe>
     </div>
-
-    <!-- <div class="ui-layout-south" style="color:black;text-align:center;background-color: gainsboro;">
-        <table style="width:100%;">
-            <tr>
-                <td class="titulo" style="min-width:50px;vertical-align: top;">Observaciones</td>
-            </tr>
-        </table>
-    </div> -->
 
     <div id="bloqueo"></div>
 
