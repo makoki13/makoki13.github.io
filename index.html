@@ -53,6 +53,7 @@
         }
 
         function cargar_fichero(o) {
+            console.log(o.files);
             var nombre_fichero = o.files[0].name;
             console.log('cargar_fichero index', nombre_fichero);
             document.getElementById('frm_tabla').contentWindow.cargar_fichero(nombre_fichero);
