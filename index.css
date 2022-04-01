@@ -15,13 +15,45 @@
     height:91%;
 }
 
+.titulo_app {
+    font-size: 36px;
+    background-color: gainsboro;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    text-align:center;
+    border:1px solid white;
+}
+
+.btn_prj {
+    width:80%;
+    text-align: center;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px 1px gainsboro;
+    text-align:center;
+    border:1px solid black;
+}
+
+.btn_course {
+    width:80%;
+    text-align: center;
+    font-size: 24px;
+    background-color: peachpuff;
+    color: black;
+    text-shadow: 1px 1px 1px gainsboro;
+    text-align:center;
+    border:1px solid black;
+    visibility: hidden;
+}
+
 .proyecto {
     font-size: 36px;
     background-color: darkred;
     color: white;
     text-shadow: 1px 1px 1px black;
     text-align:center;
-    border:1px solid white;
+    border:0px solid white;
 }
 
 table{

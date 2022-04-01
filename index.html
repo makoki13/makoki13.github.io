@@ -56,6 +56,8 @@
             var nombre_fichero = o.files[0].name;
             console.log('cargar_fichero index', nombre_fichero);
             document.getElementById('frm_tabla').contentWindow.cargar_fichero(nombre_fichero);
+            document.getElementById('btn_course_add').style.visibility = 'visible';
+            document.getElementById('btn_course_save').style.visibility = 'visible';
         }
 
 
@@ -103,22 +105,27 @@
 <body>
     <div class="ui-layout-north">
         <table id='principal' style="width:100%;">
-            <tr>
-                <td style="width:100%;text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">UC PLANNER</td>
+            <tr style="height:50px;">
+                <td style="width:100%;text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">
+                    <table style="width:100%;">
+                        <tr>
+                            <td class="titulo_app" style="width:80%;">UC PLANNER</td>
+                            <td style="min-width:100px;"><button class="btn_prj" onclick="crea_fichero()">NEW FILE</button></td>
+                            <td style="min-width:100px;">
+                                <button class="btn_prj" onclick="$('#file-input').trigger('click');">LOAD FILE</button>
+                                <input id="file-input" type="file" name="name" style="display: none;" onchange="cargar_fichero(this)" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
             <tr>
                 <td style="text-align:center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 24px;font-weight: bolder;">
                     <table>
                         <tr>
-                            <td id="fichero" class="proyecto" style="width:100%;"></td>
-                            <td class="proyecto" style="min-width:100px;"><button onclick="crea_fichero()">NEW FILE</button></td>
-                            <td class="proyecto" style="min-width:100px;">
-                                <button onclick="$('#file-input').trigger('click');">LOAD FILE</button>
-                                <input id="file-input" type="file" name="name" style="display: none;" onchange="cargar_fichero(this)" />
-                            </td>
-                            <td class="proyecto" style="min-width:2px;width:2px;background-color: white;">&nbsp;</td>
-                            <td class="proyecto" style="min-width:100px;"><button onclick="insertar_registro()">ADD</button></td>
-                            <td class="proyecto" style="min-width:100px;"><button onclick="guardar()">SAVE</button></td>
+                            <td id="fichero" class="proyecto" style="width:100%;">&nbsp;</td>
+                            <td class="proyecto" style="min-width:100px;"><button id="btn_course_add" class="btn_course" onclick="insertar_registro()">ADD</button></td>
+                            <td class="proyecto" style="min-width:100px;"><button id="btn_course_save" class="btn_course" onclick="guardar()">SAVE</button></td>
                         </tr>
                     </table>
                 </td>
