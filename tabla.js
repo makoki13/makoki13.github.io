@@ -136,7 +136,7 @@ function muestra() {
 
         }
 
-        fila += '<td class="' + clase_celda + '" onclick="set_nombre(this,' + value._indice + ');">&nbsp;' + value.nombre_poi + '</td>';
+        fila += '<td class="' + clase_celda + '" onclick="set_nombre(this,' + value._indice + ');">' + value.nombre_poi + '</td>';
 
         fila += '<td onclick="set_distancia(this,' + value._indice + ')">' + value.distancia + '</td>';
 

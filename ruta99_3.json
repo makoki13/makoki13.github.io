@@ -83,17 +83,7 @@
   },
   {
     "_indice": 8,
-    "nombre_poi": "Fin Subida 2",
-    "distancia": 22.6,
-    "notas": "",
-    "atributos": [
-      "fin_subida"
-    ],
-    "intervalo": "0.0"
-  },
-  {
-    "_indice": 9,
-    "nombre_poi": "Fin CP1",
+    "nombre_poi": "Fin Subida 2 / Fin CP1",
     "distancia": 22.6,
     "notas": "",
     "atributos": [
@@ -102,7 +92,7 @@
     "intervalo": "5.2"
   },
   {
-    "_indice": 10,
+    "_indice": 9,
     "nombre_poi": "CP2",
     "distancia": 27.8,
     "notas": "",
@@ -112,7 +102,7 @@
     "intervalo": "0.8"
   },
   {
-    "_indice": 11,
+    "_indice": 10,
     "nombre_poi": "Fin CP2",
     "distancia": 28.6,
     "notas": "",
@@ -122,7 +112,7 @@
     "intervalo": "5.3"
   },
   {
-    "_indice": 12,
+    "_indice": 11,
     "nombre_poi": "Subida 3",
     "distancia": 33.9,
     "notas": "1.2\t00:06\t\t4.4%\t10.9%",
@@ -132,7 +122,7 @@
     "intervalo": "0.2"
   },
   {
-    "_indice": 13,
+    "_indice": 12,
     "nombre_poi": "Gasolinera",
     "distancia": 34.1,
     "notas": "",
@@ -142,7 +132,7 @@
     "intervalo": "1.0"
   },
   {
-    "_indice": 14,
+    "_indice": 13,
     "nombre_poi": "Fin Subida 3",
     "distancia": 35.1,
     "notas": "",
@@ -152,7 +142,7 @@
     "intervalo": "6.8"
   },
   {
-    "_indice": 15,
+    "_indice": 14,
     "nombre_poi": "Cheste (Gas)",
     "distancia": 41.9,
     "notas": "",
@@ -163,7 +153,7 @@
     "intervalo": "2.7"
   },
   {
-    "_indice": 16,
+    "_indice": 15,
     "nombre_poi": "Subida 4",
     "distancia": 44.6,
     "notas": "1.3\t00:06\t\t2.9%\t5.8%",
@@ -173,7 +163,7 @@
     "intervalo": "1.3"
   },
   {
-    "_indice": 17,
+    "_indice": 16,
     "nombre_poi": "Fin Subida 4",
     "distancia": 45.9,
     "notas": "",
@@ -183,7 +173,7 @@
     "intervalo": "1.6"
   },
   {
-    "_indice": 18,
+    "_indice": 17,
     "nombre_poi": "Bajada 1",
     "distancia": 47.5,
     "notas": "1.5\t00:03\t\t-4.6%\t-1.4%",
@@ -193,7 +183,7 @@
     "intervalo": "1.5"
   },
   {
-    "_indice": 19,
+    "_indice": 18,
     "nombre_poi": "Fin Bajada 1",
     "distancia": 49,
     "notas": "",
@@ -203,7 +193,7 @@
     "intervalo": "7.1"
   },
   {
-    "_indice": 20,
+    "_indice": 19,
     "nombre_poi": "Pedralba (Gas)",
     "distancia": 56.1,
     "notas": "",
@@ -214,7 +204,7 @@
     "intervalo": "0.5"
   },
   {
-    "_indice": 21,
+    "_indice": 20,
     "nombre_poi": "CP3",
     "distancia": 56.6,
     "notas": "",
@@ -224,7 +214,7 @@
     "intervalo": "0.9"
   },
   {
-    "_indice": 22,
+    "_indice": 21,
     "nombre_poi": "Subida 5",
     "distancia": 57.5,
     "notas": "1.3\t00:07\t\t3.3%\t5.9%",
@@ -234,18 +224,8 @@
     "intervalo": "1.3"
   },
   {
-    "_indice": 23,
-    "nombre_poi": "Fin Subida 5",
-    "distancia": 58.8,
-    "notas": "",
-    "atributos": [
-      "fin_subida"
-    ],
-    "intervalo": "0.0"
-  },
-  {
-    "_indice": 24,
-    "nombre_poi": "Fin CP3",
+    "_indice": 22,
+    "nombre_poi": "Fin Subida 5 / Fin CP3",
     "distancia": 58.8,
     "notas": "",
     "atributos": [
@@ -254,7 +234,7 @@
     "intervalo": "2.0"
   },
   {
-    "_indice": 25,
+    "_indice": 23,
     "nombre_poi": "Subida 6",
     "distancia": 60.8,
     "notas": "1.9\t00:09\t\t3.0%\t6.3%",
@@ -264,7 +244,7 @@
     "intervalo": "0.7"
   },
   {
-    "_indice": 26,
+    "_indice": 24,
     "nombre_poi": "CP4",
     "distancia": 61.5,
     "notas": "",
@@ -274,18 +254,8 @@
     "intervalo": "1.2"
   },
   {
-    "_indice": 27,
-    "nombre_poi": "Fin Subida 6",
-    "distancia": 62.7,
-    "notas": "",
-    "atributos": [
-      "fin_subida"
-    ],
-    "intervalo": "0.0"
-  },
-  {
-    "_indice": 28,
-    "nombre_poi": "Fin CP4",
+    "_indice": 25,
+    "nombre_poi": "Fin Subida 6 / Fin CP4",
     "distancia": 62.7,
     "notas": "",
     "atributos": [
@@ -294,7 +264,7 @@
     "intervalo": "4.9"
   },
   {
-    "_indice": 29,
+    "_indice": 26,
     "nombre_poi": "Casinos (Gas)",
     "distancia": 67.6,
     "notas": "",
@@ -305,7 +275,7 @@
     "intervalo": "1.5"
   },
   {
-    "_indice": 30,
+    "_indice": 27,
     "nombre_poi": "Subida 7",
     "distancia": 69.1,
     "notas": "21.6\t01:55\t2.16\t3.3%\t14.6%",
@@ -315,7 +285,7 @@
     "intervalo": "1.8"
   },
   {
-    "_indice": 31,
+    "_indice": 28,
     "nombre_poi": "CP5",
     "distancia": 70.9,
     "notas": "",
@@ -325,7 +295,7 @@
     "intervalo": "9.6"
   },
   {
-    "_indice": 32,
+    "_indice": 29,
     "nombre_poi": "Fin CP5",
     "distancia": 80.5,
     "notas": "",
@@ -335,7 +305,7 @@
     "intervalo": "1.9"
   },
   {
-    "_indice": 33,
+    "_indice": 30,
     "nombre_poi": "CP6",
     "distancia": 82.4,
     "notas": "",
@@ -345,7 +315,7 @@
     "intervalo": "0.9"
   },
   {
-    "_indice": 34,
+    "_indice": 31,
     "nombre_poi": "Alcublas (Gas)",
     "distancia": 83.3,
     "notas": "",
@@ -356,7 +326,7 @@
     "intervalo": "1.3"
   },
   {
-    "_indice": 35,
+    "_indice": 32,
     "nombre_poi": "Fin CP6",
     "distancia": 84.6,
     "notas": "",
@@ -366,7 +336,7 @@
     "intervalo": "2.1"
   },
   {
-    "_indice": 36,
+    "_indice": 33,
     "nombre_poi": "CP7",
     "distancia": 86.7,
     "notas": "",
@@ -376,7 +346,7 @@
     "intervalo": "2.6"
   },
   {
-    "_indice": 37,
+    "_indice": 34,
     "nombre_poi": "Fin CP7",
     "distancia": 89.3,
     "notas": "",
@@ -386,7 +356,7 @@
     "intervalo": "1.4"
   },
   {
-    "_indice": 38,
+    "_indice": 35,
     "nombre_poi": "Fin Subida 7",
     "distancia": 90.7,
     "notas": "",
@@ -396,7 +366,7 @@
     "intervalo": "1.2"
   },
   {
-    "_indice": 39,
+    "_indice": 36,
     "nombre_poi": "Sacañet",
     "distancia": 91.9,
     "notas": "",
