@@ -21,10 +21,8 @@
 
 
             edicion = params.get("edicion");
-            console.log("edicion: " + edicion);
             if (edicion == 'S') {
                 indice = params.get("indice");
-                console.log("indice: " + indice);
                 window.parent.get_punto(indice);
 
                 document.getElementById('btn_accion').innerHTML = 'EDIT';

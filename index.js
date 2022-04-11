@@ -11,8 +11,8 @@ function desbloquea_insertar_registro() {
     document.getElementById('nuevo_poi_sombra').style.visibility = 'hidden';
 }
 
-function add(indice,punto, distancia, comentarios, atributos) {
-    document.getElementById('frm_tabla').contentWindow.add(indice,punto, distancia, comentarios, atributos);
+function add(indice, punto, distancia, comentarios, atributos) {
+    document.getElementById('frm_tabla').contentWindow.add(indice, punto, distancia, comentarios, atributos);
 }
 
 function guardar() {
@@ -62,24 +62,4 @@ function crea_fichero() {
 
     var file = new File(["[]"], nombre_nuevo_fichero, { type: "application/json" });
     saveAs(file);
-
-    /* var blob = new Blob(["[]"], { type: 'application/json' });
-
-    saveAs(blob, nombre_nuevo_fichero); */
-
-    //var generatedFile = new File(["Rough Draft ...."], nombre_nuevo_fichero, { type: "text/plain" })
-    //console.log(generatedFile);
-
-    /* var cadena = JSON.stringify('[]');
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cadena));
-    element.setAttribute('download', nombre_nuevo_fichero);
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-
-     */
-
-    //setInterval(existe_fichero, 1000);
 }

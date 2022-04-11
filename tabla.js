@@ -52,8 +52,6 @@ function carga(fichero) {
 
             i++;
         })
-
-        //$("#cuerpo_tabla").append(fila);
     }).then(function (data) {
         return lista;
     });
@@ -116,8 +114,6 @@ function set_distancia(o, indice) {
             pois[key].distancia = resp;
         }
     });
-
-    //console.log(pois);
 
     pois = recalcula(pois);
 
@@ -199,8 +195,6 @@ function guardar() {
 
 
 function borra(indice) {
-    //celda.parentNode.parentNode.style.display = 'none';
-
     var lista = []; var i = 0;
     $.each(pois, function (key, value) {
         if (value._indice != indice) {
@@ -210,7 +204,7 @@ function borra(indice) {
     });
     pois = lista;
 
-    console.log(pois);
+    pois = recalcula(pois);
 
     muestra();
 }
