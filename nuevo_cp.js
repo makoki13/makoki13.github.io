@@ -23,7 +23,7 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio subida */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'Asc: ' + ascension + " M: " + media + "%", ['inicio_subida']);
+    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km. * Asc: ' + ascension + " * M: " + media + "%", ['inicio_subida']);
     /* generar punto fin subida */
     var fin = parseFloat(inicio) + parseFloat(distancia);
     window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_subida']);

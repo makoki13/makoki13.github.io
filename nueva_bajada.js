@@ -19,6 +19,8 @@ function add() {
     var inicio = document.getElementById('inicio').value;
     var fin = document.getElementById('fin').value;
 
+    var distancia = parseFloat(fin) - parseFloat(inicio);
+
     var tiempo = document.getElementById('tiempo').value;
     var media = document.getElementById('media').value;
     var max_porc = document.getElementById('max_porc').value;
@@ -26,7 +28,7 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio bajada */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'T: ' + tiempo + " M: " + media + "% Max: " + max_porc + "%", ['inicio_bajada']);
+    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km * T: ' + tiempo + " * M: " + media + "% * Max: " + max_porc + "%", ['inicio_bajada']);
     /* generar punto fin subida */
     window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_bajada']);
 

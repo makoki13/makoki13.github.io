@@ -13,7 +13,7 @@
     "_indice": 1,
     "nombre_poi": "Inicio Subida 1",
     "distancia": "0",
-    "notas": "T: 00:33 F: 1.73 M: 5.3Max: 13.6",
+    "notas": "D: 4.9Km. * T: 00:33 * F: 1.73 * M: 5.3% * Max: 13.6%",
     "atributos": [
       "inicio_subida"
     ],
@@ -23,7 +23,7 @@
     "_indice": 2,
     "nombre_poi": "Inicio CP1",
     "distancia": "0",
-    "notas": "Asc: 287 M: 5.9%",
+    "notas": "D: 4.9Km. * Asc: 287 * M: 5.9%",
     "atributos": [
       "inicio_subida"
     ],
@@ -32,8 +32,8 @@
   {
     "_indice": 3,
     "nombre_poi": "Fin Subida 1",
-    "distancia": 4.9,
-    "notas": "Test de comentarios",
+    "distancia": "4.9",
+    "notas": "",
     "atributos": [
       "fin_subida"
     ],
@@ -53,7 +53,7 @@
     "_indice": 5,
     "nombre_poi": "Inicio Bajada 1",
     "distancia": "5",
-    "notas": "T: 00:29 M: -4.2 Max: 9",
+    "notas": "D: 10.2Km * T: 00:29 * M: -4.2% * Max: 9%",
     "atributos": [
       "inicio_bajada"
     ],
@@ -131,21 +131,21 @@
   },
   {
     "_indice": 13,
-    "nombre_poi": "Fin Bajada 1",
-    "distancia": "15.2",
-    "notas": "",
-    "atributos": [
-      "fin_bajada"
-    ],
-    "intervalo": "0.0"
-  },
-  {
-    "_indice": 14,
     "nombre_poi": "Inicio CP3",
     "distancia": "15.2",
     "notas": "Asc: 306 M: 5.7%",
     "atributos": [
       "inicio_subida"
+    ],
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 14,
+    "nombre_poi": "Fin Bajada 1",
+    "distancia": "15.2",
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
     ],
     "intervalo": "0.6"
   },

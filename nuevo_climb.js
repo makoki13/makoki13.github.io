@@ -20,6 +20,8 @@ function add() {
     var inicio = document.getElementById('inicio').value;
     var fin = document.getElementById('fin').value;
 
+    var distancia = parseFloat(fin) - parseFloat(inicio);
+
     var tiempo = document.getElementById('tiempo').value;
     var fiets = document.getElementById('fiets').value;
     var media = document.getElementById('media').value;
@@ -28,7 +30,8 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio subida */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'T: ' + tiempo + " F: " + fiets + " M: " + media + "% Max: " + max_porc + "%", ['inicio_subida']);
+    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km. * T: ' + tiempo + " * F: " + fiets + " * M: " + media + "% * Max: " + max_porc + "%",
+        ['inicio_subida']);
     /* generar punto fin subida */
     window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_subida']);
 
