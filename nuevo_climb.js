@@ -28,7 +28,7 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio subida */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'T: ' + tiempo + " F: " + fiets + " M: " + media + " Max: " + max_porc, ['inicio_subida']);
+    window.parent.add(indice, "Inicio " + punto, inicio, 'T: ' + tiempo + " F: " + fiets + " M: " + media + "% Max: " + max_porc + "%", ['inicio_subida']);
     /* generar punto fin subida */
     window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_subida']);
 

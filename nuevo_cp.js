@@ -1,9 +1,8 @@
 var nombre = '';
 var inicio = 0;
 var fin = '';
-var tiempo = 0;
+var distancia = 0;
 var media = 0;
-var max_porc = 0;
 var comentarios = '';
 var indice = 0;
 
@@ -17,18 +16,17 @@ function add() {
     }
     var punto = document.getElementById('nombre').value;
     var inicio = document.getElementById('inicio').value;
-    var fin = document.getElementById('fin').value;
-
-    var tiempo = document.getElementById('tiempo').value;
+    var distancia = document.getElementById('distancia').value;
+    var ascension = document.getElementById('ascension').value;
     var media = document.getElementById('media').value;
-    var max_porc = document.getElementById('max_porc').value;
 
     var comentarios = document.getElementById('comentarios').value;
 
-    /* generar punto inicio bajada */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'T: ' + tiempo + " M: " + media + "% Max: " + max_porc + "%", ['inicio_bajada']);
+    /* generar punto inicio subida */
+    window.parent.add(indice, "Inicio " + punto, inicio, 'Asc: ' + ascension + " M: " + media + "%", ['inicio_subida']);
     /* generar punto fin subida */
-    window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_bajada']);
+    var fin = parseFloat(inicio) + parseFloat(distancia);
+    window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_subida']);
 
     if (edicion == 'S') {
         salir();
@@ -36,10 +34,9 @@ function add() {
 
     document.getElementById('nombre').value = '';
     document.getElementById('inicio').value = '';
-    document.getElementById('fin').value = '';
-    document.getElementById('tiempo').value = '';
+    document.getElementById('distancia').value = '';
+    document.getElementById('ascension').value = '';
     document.getElementById('media').value = '';
-    document.getElementById('max_porc').value = '';
 
     document.getElementById('comentarios').value = '';
 
@@ -47,13 +44,12 @@ function add() {
 }
 
 
-function set_valores_formulario(nombre, inicio, fin, tiempo, media, max_porc, notas) {
+function set_valores_formulario(nombre, inicio, distancia, ascension, media, notas) {
     document.getElementById('nombre').value = nombre;
     document.getElementById('inicio').value = inicio;
-    document.getElementById('fin').value = fin;
-    document.getElementById('tiempo').value = tiempo;
+    document.getElementById('distancia').value = distancia;
+    document.getElementById('ascension').value = ascension;
     document.getElementById('media').value = media;
-    document.getElementById('max_porc').value = max_porc;
 
     document.getElementById('comentarios').value = notas;
 }

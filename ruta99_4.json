@@ -17,20 +17,40 @@
     "atributos": [
       "inicio_subida"
     ],
-    "intervalo": "4.9"
+    "intervalo": "0.0"
   },
   {
     "_indice": 2,
+    "nombre_poi": "Inicio CP1",
+    "distancia": "0",
+    "notas": "Asc: 287 M: 5.9%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "4.9"
+  },
+  {
+    "_indice": 3,
     "nombre_poi": "Fin Subida 1",
     "distancia": 4.9,
     "notas": "Test de comentarios",
     "atributos": [
       "fin_subida"
     ],
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 4,
+    "nombre_poi": "Fin CP1",
+    "distancia": 4.9,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
     "intervalo": "0.1"
   },
   {
-    "_indice": 3,
+    "_indice": 5,
     "nombre_poi": "Inicio Bajada 1",
     "distancia": "5",
     "notas": "T: 00:29 M: -4.2 Max: 9",
@@ -40,7 +60,7 @@
     "intervalo": "1.4"
   },
   {
-    "_indice": 4,
+    "_indice": 6,
     "nombre_poi": "Canales",
     "distancia": 6.4,
     "notas": "",
@@ -50,17 +70,27 @@
     "intervalo": "0.2"
   },
   {
-    "_indice": 5,
+    "_indice": 7,
     "nombre_poi": "Inicio Gravel",
     "distancia": 6.6,
     "notas": "",
     "atributos": [
       "incidencia"
     ],
-    "intervalo": "6.5"
+    "intervalo": "6.0"
   },
   {
-    "_indice": 6,
+    "_indice": 8,
+    "nombre_poi": "Inicio CP2",
+    "distancia": "12.6",
+    "notas": "Asc: 37 M: 4.6%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "intervalo": "0.5"
+  },
+  {
+    "_indice": 9,
     "nombre_poi": "Fin Gravel",
     "distancia": 13.1,
     "notas": "",
@@ -70,17 +100,27 @@
     "intervalo": "0.1"
   },
   {
-    "_indice": 7,
+    "_indice": 10,
     "nombre_poi": "Andilla",
     "distancia": 13.2,
     "notas": "",
     "atributos": [
       "poblacion"
     ],
-    "intervalo": "2.0"
+    "intervalo": "0.2"
   },
   {
-    "_indice": 8,
+    "_indice": 11,
+    "nombre_poi": "Fin CP2",
+    "distancia": 13.4,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "intervalo": "1.8"
+  },
+  {
+    "_indice": 12,
     "nombre_poi": "Inicio Subida 2",
     "distancia": "15.2",
     "notas": "T: 00:35 F: 1.52 M: 5.6Max: 15.9",
@@ -90,7 +130,7 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 9,
+    "_indice": 13,
     "nombre_poi": "Fin Bajada 1",
     "distancia": "15.2",
     "notas": "",
@@ -100,17 +140,17 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 10,
-    "nombre_poi": "Fin Bajada 1",
+    "_indice": 14,
+    "nombre_poi": "Inicio CP3",
     "distancia": "15.2",
-    "notas": "",
+    "notas": "Asc: 306 M: 5.7%",
     "atributos": [
-      "fin_bajada"
+      "inicio_subida"
     ],
     "intervalo": "0.6"
   },
   {
-    "_indice": 11,
+    "_indice": 15,
     "nombre_poi": "La Pobleta",
     "distancia": 15.8,
     "notas": "",
@@ -120,7 +160,7 @@
     "intervalo": "4.8"
   },
   {
-    "_indice": 12,
+    "_indice": 16,
     "nombre_poi": "Fin Subida 2",
     "distancia": "20.6",
     "notas": "",
@@ -130,17 +170,27 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 13,
+    "_indice": 17,
     "nombre_poi": "Inicio Bajada 2",
     "distancia": "20.6",
     "notas": "T: 00:09 M: -3.9 Max: 4.6",
     "atributos": [
       "inicio_bajada"
     ],
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 18,
+    "nombre_poi": "Fin CP3",
+    "distancia": 20.6,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
     "intervalo": "3.8"
   },
   {
-    "_indice": 14,
+    "_indice": 19,
     "nombre_poi": "Fin Bajada 2",
     "distancia": "24.4",
     "notas": "",
@@ -150,7 +200,7 @@
     "intervalo": "1.8"
   },
   {
-    "_indice": 15,
+    "_indice": 20,
     "nombre_poi": "Inicio Subida 3",
     "distancia": "26.2",
     "notas": "T: 00:03 M: -4.2 Max: -0.2",
@@ -160,7 +210,7 @@
     "intervalo": "1.4"
   },
   {
-    "_indice": 16,
+    "_indice": 21,
     "nombre_poi": "Fin Subida 3",
     "distancia": "27.6",
     "notas": "",
@@ -170,7 +220,7 @@
     "intervalo": "2.7"
   },
   {
-    "_indice": 17,
+    "_indice": 22,
     "nombre_poi": "Inicio Subida 3",
     "distancia": "30.3",
     "notas": "T: 00:20 F: 0.42 M: 2.8Max: 9.7",
@@ -180,7 +230,7 @@
     "intervalo": "3.7"
   },
   {
-    "_indice": 18,
+    "_indice": 23,
     "nombre_poi": "Fin Subida 3",
     "distancia": "34",
     "notas": "",
@@ -190,7 +240,7 @@
     "intervalo": "4.0"
   },
   {
-    "_indice": 19,
+    "_indice": 24,
     "nombre_poi": "Inicio Subida 4",
     "distancia": "38",
     "notas": "T: 00:14 F: 0.37 M: 3.1Max: 7.4",
@@ -200,7 +250,7 @@
     "intervalo": "0.1"
   },
   {
-    "_indice": 20,
+    "_indice": 25,
     "nombre_poi": "La Yesa",
     "distancia": 38.1,
     "notas": "",
@@ -210,7 +260,7 @@
     "intervalo": "2.6"
   },
   {
-    "_indice": 21,
+    "_indice": 26,
     "nombre_poi": "Fin Subida 4",
     "distancia": "40.7",
     "notas": "",
@@ -220,7 +270,7 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 22,
+    "_indice": 27,
     "nombre_poi": "Inicio Bajada 4",
     "distancia": "40.7",
     "notas": "T: 00:04 M: -4.1 Max: 0.4",
@@ -230,7 +280,7 @@
     "intervalo": "2.1"
   },
   {
-    "_indice": 23,
+    "_indice": 28,
     "nombre_poi": "Fin Bajada 4",
     "distancia": "42.8",
     "notas": "",
@@ -240,7 +290,7 @@
     "intervalo": "2.6"
   },
   {
-    "_indice": 24,
+    "_indice": 29,
     "nombre_poi": "Inicio Subida 5",
     "distancia": "45.4",
     "notas": "T: 00:29 F: 0.82 M: 3.2Max: 7.7",
@@ -250,7 +300,7 @@
     "intervalo": "4.3"
   },
   {
-    "_indice": 25,
+    "_indice": 30,
     "nombre_poi": "El Collado",
     "distancia": 49.7,
     "notas": "Cerca",
@@ -260,7 +310,7 @@
     "intervalo": "1.3"
   },
   {
-    "_indice": 26,
+    "_indice": 31,
     "nombre_poi": "Fin Subida 5",
     "distancia": "51",
     "notas": "",
@@ -270,7 +320,7 @@
     "intervalo": "0.9"
   },
   {
-    "_indice": 27,
+    "_indice": 32,
     "nombre_poi": "Inicio Bajada 5",
     "distancia": "51.9",
     "notas": "T: 00:17 M: -5.8 Max: 13",
@@ -280,7 +330,7 @@
     "intervalo": "3.5"
   },
   {
-    "_indice": 28,
+    "_indice": 33,
     "nombre_poi": "Losilla",
     "distancia": 55.4,
     "notas": "",
@@ -290,7 +340,7 @@
     "intervalo": "3.8"
   },
   {
-    "_indice": 29,
+    "_indice": 34,
     "nombre_poi": "Fin Bajada 5",
     "distancia": "59.2",
     "notas": "",
@@ -300,7 +350,7 @@
     "intervalo": "2.1"
   },
   {
-    "_indice": 30,
+    "_indice": 35,
     "nombre_poi": "Inicio Subida 6",
     "distancia": "61.3",
     "notas": "T: 00:49 F: 2.65 M: 5.4Max: 13.5",
@@ -310,7 +360,7 @@
     "intervalo": "7.1"
   },
   {
-    "_indice": 31,
+    "_indice": 36,
     "nombre_poi": "Frontera Aragón",
     "distancia": 68.4,
     "notas": "",
@@ -320,7 +370,7 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 32,
+    "_indice": 37,
     "nombre_poi": "Fin Subida 6",
     "distancia": "68.4",
     "notas": "",
@@ -330,7 +380,7 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 33,
+    "_indice": 38,
     "nombre_poi": "Inicio Bajada 6",
     "distancia": "68.4",
     "notas": "T: 00:16 M: -3.5 Max: 12.7",
@@ -340,7 +390,7 @@
     "intervalo": "5.7"
   },
   {
-    "_indice": 34,
+    "_indice": 39,
     "nombre_poi": "Puebla de San Miguel",
     "distancia": 74.1,
     "notas": "",
@@ -350,7 +400,7 @@
     "intervalo": "0.0"
   },
   {
-    "_indice": 35,
+    "_indice": 40,
     "nombre_poi": "Fin Bajada 6",
     "distancia": "74.1",
     "notas": "",

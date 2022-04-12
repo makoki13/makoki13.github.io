@@ -13,10 +13,10 @@ function insertar_descenso() {
 }
 
 function insertar_cp() {
-    /* document.getElementById('frmNuevaVersion').src = 'nueva_bajada.html';
+    document.getElementById('frmNuevaVersion').src = 'nuevo_cp.html';
     document.getElementById('bloqueo').style.visibility = 'visible';
     document.getElementById('nuevo_poi').style.visibility = 'visible';
-    document.getElementById('nuevo_poi_sombra').style.visibility = 'visible'; */
+    document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
 }
 
 function insertar_registro() {
