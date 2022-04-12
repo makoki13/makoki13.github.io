@@ -1,18 +1,19 @@
-.ui-layout-north { /* all 'panes' */
+.ui-layout-north {
+    /* all 'panes' */
     background: gainsboro;
     border: 1px solid brown;
     overflow: hidden !important;
-    min-height:20px;
+    min-height: 20px;
 }
 
 .ui-layout-south {
     overflow: hidden !important;
-    min-height:60px;
+    min-height: 60px;
 }
 
 .ui-layout-center {
     overflow: hidden !important;
-    height:91%;
+    height: 91%;
 }
 
 .titulo_app {
@@ -20,30 +21,30 @@
     background-color: gainsboro;
     color: black;
     text-shadow: 1px 1px 1px white;
-    text-align:center;
-    border:1px solid white;
+    text-align: center;
+    border: 1px solid white;
 }
 
 .btn_prj {
-    width:80%;
+    width: 80%;
     text-align: center;
     font-size: 24px;
     background-color: white;
     color: black;
     text-shadow: 1px 1px 1px gainsboro;
-    text-align:center;
-    border:1px solid black;
+    text-align: center;
+    border: 1px solid black;
 }
 
 .btn_course {
-    width:80%;
+    width: 80%;
     text-align: center;
     font-size: 24px;
     background-color: peachpuff;
     color: black;
     text-shadow: 1px 1px 1px gainsboro;
-    text-align:center;
-    border:1px solid black;
+    text-align: center;
+    border: 1px solid black;
     visibility: hidden;
 }
 
@@ -52,15 +53,16 @@
     background-color: darkred;
     color: white;
     text-shadow: 1px 1px 1px black;
-    text-align:center;
-    border:0px solid white;
+    text-align: center;
+    border: 0px solid white;
+    min-width: 180px;
 }
 
-table{
-    table-layout:fixed;
-    border-collapse:collapse;
-    border-spacing:0;
-    border-style:hidden;
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-style: hidden;
 }
 
 #bloqueo {

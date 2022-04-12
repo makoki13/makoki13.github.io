@@ -1,0 +1,15 @@
+.titulo {
+    background-color: darkred;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.etiqueta {
+    text-align: right;
+    padding-right: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+}

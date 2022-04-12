@@ -1,3 +1,24 @@
+function insertar_ascenso() {
+    document.getElementById('frmNuevaVersion').src = 'nuevo_climb.html';
+    document.getElementById('bloqueo').style.visibility = 'visible';
+    document.getElementById('nuevo_poi').style.visibility = 'visible';
+    document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
+}
+
+function insertar_descenso() {
+    document.getElementById('frmNuevaVersion').src = 'nueva_bajada.html';
+    document.getElementById('bloqueo').style.visibility = 'visible';
+    document.getElementById('nuevo_poi').style.visibility = 'visible';
+    document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
+}
+
+function insertar_cp() {
+    /* document.getElementById('frmNuevaVersion').src = 'nueva_bajada.html';
+    document.getElementById('bloqueo').style.visibility = 'visible';
+    document.getElementById('nuevo_poi').style.visibility = 'visible';
+    document.getElementById('nuevo_poi_sombra').style.visibility = 'visible'; */
+}
+
 function insertar_registro() {
     document.getElementById('frmNuevaVersion').src = 'nuevo_poi.html';
     document.getElementById('bloqueo').style.visibility = 'visible';
@@ -48,6 +69,9 @@ function cargar_fichero(o) {
     var nombre_fichero = o.files[0].name;
     console.log('cargar_fichero index', nombre_fichero);
     document.getElementById('frm_tabla').contentWindow.cargar_fichero(nombre_fichero);
+    document.getElementById('btn_course_climb').style.visibility = 'visible';
+    document.getElementById('btn_course_desc').style.visibility = 'visible';
+    document.getElementById('btn_course_cp').style.visibility = 'visible';
     document.getElementById('btn_course_add').style.visibility = 'visible';
     document.getElementById('btn_course_save').style.visibility = 'visible';
 }

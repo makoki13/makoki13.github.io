@@ -215,10 +215,10 @@ function edita_registro(o, indice) {
 }
 
 function compare(a, b) {
-    if (a.distancia < b.distancia) {
+    if (parseFloat(a.distancia) < parseFloat(b.distancia)) {
         return -1;
     }
-    if (a.distancia > b.distancia) {
+    if (parseFloat(a.distancia) > parseFloat(b.distancia)) {
         return 1;
     }
     return 0;
