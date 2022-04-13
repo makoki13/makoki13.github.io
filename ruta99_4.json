@@ -2,7 +2,7 @@
   {
     "_indice": 0,
     "nombre_poi": "Sacañet",
-    "distancia": 0,
+    "distancia": "0.0",
     "notas": "",
     "atributos": [
       "inicio"
@@ -12,7 +12,7 @@
   {
     "_indice": 1,
     "nombre_poi": "Inicio Subida 1",
-    "distancia": "0",
+    "distancia": "0.0",
     "notas": "D: 4.9Km. * T: 00:33 * F: 1.73 * M: 5.3% * Max: 13.6%",
     "atributos": [
       "inicio_subida"
@@ -22,7 +22,7 @@
   {
     "_indice": 2,
     "nombre_poi": "Inicio CP1",
-    "distancia": "0",
+    "distancia": "0.0",
     "notas": "D: 4.9Km. * Asc: 287 * M: 5.9%",
     "atributos": [
       "inicio_subida"
@@ -42,7 +42,7 @@
   {
     "_indice": 4,
     "nombre_poi": "Fin CP1",
-    "distancia": 4.9,
+    "distancia": "4.9",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -52,7 +52,7 @@
   {
     "_indice": 5,
     "nombre_poi": "Inicio Bajada 1",
-    "distancia": "5",
+    "distancia": "5.0",
     "notas": "D: 10.2Km * T: 00:29 * M: -4.2% * Max: 9%",
     "atributos": [
       "inicio_bajada"
@@ -62,7 +62,7 @@
   {
     "_indice": 6,
     "nombre_poi": "Canales",
-    "distancia": 6.4,
+    "distancia": "6.4",
     "notas": "",
     "atributos": [
       "poblacion"
@@ -72,7 +72,7 @@
   {
     "_indice": 7,
     "nombre_poi": "Inicio Gravel",
-    "distancia": 6.6,
+    "distancia": "6.6",
     "notas": "",
     "atributos": [
       "incidencia"
@@ -92,7 +92,7 @@
   {
     "_indice": 9,
     "nombre_poi": "Fin Gravel",
-    "distancia": 13.1,
+    "distancia": "13.1",
     "notas": "",
     "atributos": [
       "incidencia"
@@ -102,7 +102,7 @@
   {
     "_indice": 10,
     "nombre_poi": "Andilla",
-    "distancia": 13.2,
+    "distancia": "13.2",
     "notas": "",
     "atributos": [
       "poblacion"
@@ -112,7 +112,7 @@
   {
     "_indice": 11,
     "nombre_poi": "Fin CP2",
-    "distancia": 13.4,
+    "distancia": "13.4",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -152,7 +152,7 @@
   {
     "_indice": 15,
     "nombre_poi": "La Pobleta",
-    "distancia": 15.8,
+    "distancia": "15.8",
     "notas": "",
     "atributos": [
       "poblacion"
@@ -182,7 +182,7 @@
   {
     "_indice": 18,
     "nombre_poi": "Fin CP3",
-    "distancia": 20.6,
+    "distancia": "20.6",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -242,7 +242,7 @@
   {
     "_indice": 24,
     "nombre_poi": "Fin CP4",
-    "distancia": 33.9,
+    "distancia": "33.9",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -252,7 +252,7 @@
   {
     "_indice": 25,
     "nombre_poi": "Fin Subida 3",
-    "distancia": "34",
+    "distancia": "34.0",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -262,7 +262,7 @@
   {
     "_indice": 26,
     "nombre_poi": "Inicio Subida 4",
-    "distancia": "38",
+    "distancia": "38.0",
     "notas": "T: 00:14 F: 0.37 M: 3.1Max: 7.4",
     "atributos": [
       "inicio_subida"
@@ -272,7 +272,7 @@
   {
     "_indice": 27,
     "nombre_poi": "Inicio CP5",
-    "distancia": "38",
+    "distancia": "38.0",
     "notas": "Asc: 85 M: 3.1%",
     "atributos": [
       "inicio_subida"
@@ -282,7 +282,7 @@
   {
     "_indice": 28,
     "nombre_poi": "La Yesa",
-    "distancia": 38.1,
+    "distancia": "38.1",
     "notas": "",
     "atributos": [
       "poblacion"
@@ -312,7 +312,7 @@
   {
     "_indice": 31,
     "nombre_poi": "Fin CP5",
-    "distancia": 40.8,
+    "distancia": "40.8",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -352,7 +352,7 @@
   {
     "_indice": 35,
     "nombre_poi": "El Collado",
-    "distancia": 49.7,
+    "distancia": "49.7",
     "notas": "Cerca",
     "atributos": [
       "poblacion"
@@ -362,7 +362,7 @@
   {
     "_indice": 36,
     "nombre_poi": "Fin Subida 5",
-    "distancia": "51",
+    "distancia": "51.0",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -372,7 +372,7 @@
   {
     "_indice": 37,
     "nombre_poi": "Fin CP6",
-    "distancia": 51.099999999999994,
+    "distancia": "51.1",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -392,7 +392,7 @@
   {
     "_indice": 39,
     "nombre_poi": "Losilla",
-    "distancia": 55.4,
+    "distancia": "55.4",
     "notas": "",
     "atributos": [
       "poblacion"
@@ -432,7 +432,7 @@
   {
     "_indice": 43,
     "nombre_poi": "Frontera Aragón",
-    "distancia": 68.4,
+    "distancia": "68.4",
     "notas": "",
     "atributos": [
       "incidencia"
@@ -462,7 +462,7 @@
   {
     "_indice": 46,
     "nombre_poi": "Fin CP7",
-    "distancia": 68.4,
+    "distancia": "68.4",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -472,7 +472,7 @@
   {
     "_indice": 47,
     "nombre_poi": "Puebla de San Miguel",
-    "distancia": 74.1,
+    "distancia": "74.1",
     "notas": "",
     "atributos": [
       "poblacion"

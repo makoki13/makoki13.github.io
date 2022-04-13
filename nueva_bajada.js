@@ -31,9 +31,9 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio bajada */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km * T: ' + tiempo + " * M: " + media + "% * Max: " + max_porc + "%", ['inicio_bajada'], indice);
-    /* generar punto fin subida */
-    indice_fin = window.parent.get_new_indice();
+    indice_fin = window.parent.get_new_indice(1);
+    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km * T: ' + tiempo + " * M: " + media + "% * Max: " + max_porc + "%", ['inicio_bajada'], indice_fin);
+    /* generar punto fin subida */    
     window.parent.add(indice_fin, "Fin " + punto, fin, comentarios, ['fin_bajada'], indice);
 
     if (edicion == 'S') {

@@ -1,5 +1,5 @@
-function get_new_indice() {
-    return document.getElementById('frm_tabla').contentWindow.get_new_indice();
+function get_new_indice(incremento = 0) {
+    return document.getElementById('frm_tabla').contentWindow.get_new_indice(incremento);
 }
 
 function get_punto(indice) {
@@ -78,6 +78,7 @@ function cargar_fichero(o) {
     document.getElementById('btn_course_cp').style.visibility = 'visible';
     document.getElementById('btn_course_add').style.visibility = 'visible';
     document.getElementById('btn_course_save').style.visibility = 'visible';
+    document.getElementById('btn_course_imprime').style.visibility = 'visible';
 }
 
 var nombre_nuevo_fichero = '';
@@ -90,4 +91,15 @@ function crea_fichero() {
 
     var file = new File(["[]"], nombre_nuevo_fichero, { type: "application/json" });
     saveAs(file);
+}
+
+function get_nombre_fichero() {
+    return document.getElementById('fichero').innerHTML;
+}
+
+function imprime_pdf_2() {
+    const doc = new jsPDF();
+
+    doc.text("Hello world!", 10, 10);
+    doc.save("a4.pdf");
 }

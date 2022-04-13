@@ -1,7 +1,7 @@
 var pois;
 var nom_fichero = '';
 
-function get_new_indice() {
+function get_new_indice(incremento) {
     var indice = 0;
     $.each(pois, function (key, value) {
         if (value._indice > indice) {
@@ -9,7 +9,7 @@ function get_new_indice() {
         }
     });
 
-    return indice + 1;
+    return indice + 1 + incremento;
 }
 
 function recalcula() {
@@ -52,7 +52,7 @@ function carga(fichero) {
             lista[i] = {};
             lista[i]._indice = value._indice;
             lista[i].nombre_poi = value.nombre_poi;
-            lista[i].distancia = value.distancia;
+            lista[i].distancia = parseFloat(value.distancia).toFixed(1);
             if (i > 0) {
                 lista[i - 1].intervalo = valor_distancia_anterior.toFixed(1);
             }
@@ -172,17 +172,16 @@ function muestra() {
             fila += '<td class="atributos" onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';
         }
 
-        if (value._indice != value.punto_referencia) {
-            //console.log(value)
-            var punto_de_referencia = _get_punto(value.punto_referencia)
-            //console.log(punto_de_referencia)
-            fila += '<td class="referencia" title="' + punto_de_referencia.nombre_poi + '"> km ' + punto_de_referencia.distancia + '</td>';
-            fila += '<td></td>';
+        var titulo = '';
+        if (value.punto_referencia) {
+            if (value._indice != value.punto_referencia) {
+                var punto_de_referencia = _get_punto(value.punto_referencia)
+                if (punto_de_referencia) {
+                    titulo = punto_de_referencia.nombre_poi + ' km ' + punto_de_referencia.distancia;
+                }
+            }
         }
-        else {
-            fila += '<td><button onclick="borra(' + value._indice + ')" style="color:white">B</button></td>';
-        }
-
+        fila += '<td title="' + titulo + '"><button onclick="borra(' + value._indice + ')" style="color:white">B</button></td>';
         fila += '</tr>';
     })
 
@@ -209,14 +208,33 @@ function guardar() {
 
 
 function borra(indice) {
-    var lista = []; var i = 0;
+    console.log('indice', indice);
+
+    var lista = []; var i = 0; var punto_de_referencia = null; var indice_de_referencia = null;
     $.each(pois, function (key, value) {
         if (value._indice != indice) {
             lista[i] = pois[key];
             i++;
         }
+        else {
+            console.log('punto de ref', value.punto_referencia);
+            punto_de_referencia = _get_punto(value.punto_referencia)
+            if (punto_de_referencia) {
+                console.log('punto nuevo', punto_de_referencia, 'indice', value._indice);
+                if (punto_de_referencia.punto_referencia == value._indice) {
+                    indice_de_referencia = punto_de_referencia._indice;
+                    console.log('indice de ref', indice_de_referencia);
+                }
+            }
+        }
     });
+
     pois = lista;
+    pois = recalcula(pois);
+
+    if (indice_de_referencia != null) {
+        borra(indice_de_referencia);
+    }
 
     pois = recalcula(pois);
 
@@ -264,6 +282,10 @@ function cargar_fichero(nombre_fichero) {
 
         window.parent.document.getElementById('fichero').innerHTML = nom_fichero;
     });
+}
+
+function get_pois() {
+    return pois;
 }
 
 

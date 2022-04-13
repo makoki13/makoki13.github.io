@@ -33,10 +33,10 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio subida */
+    indice_fin = window.parent.get_new_indice(1);
     window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km. * T: ' + tiempo + " * F: " + fiets + " * M: " + media + "% * Max: " + max_porc + "%",
-        ['inicio_subida'], indice);
+        ['inicio_subida'], indice_fin);
     /* generar punto fin subida */
-    indice_fin = window.parent.get_new_indice();
     window.parent.add(indice_fin, "Fin " + punto, fin, comentarios, ['fin_subida'], indice);
 
     if (edicion == 'S') {

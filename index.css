@@ -48,6 +48,18 @@
     visibility: hidden;
 }
 
+.btn_imprime {
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    background-color: green;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    border: 1px solid black;
+    visibility: hidden;
+}
+
 .proyecto {
     font-size: 36px;
     background-color: darkred;
