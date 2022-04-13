@@ -1,8 +1,18 @@
 var pois;
 var nom_fichero = '';
 
+function get_new_indice() {
+    var indice = 0;
+    $.each(pois, function (key, value) {
+        if (value._indice > indice) {
+            indice = value._indice;
+        }
+    });
+
+    return indice + 1;
+}
+
 function recalcula() {
-    console.log('recalcula');
     var distancia_anterior = 0; var lista = [];
     var i = 0;
     $.each(pois, function (key, value) {
@@ -11,7 +21,7 @@ function recalcula() {
         }
 
         lista[i] = {};
-        lista[i]._indice = i;
+        lista[i]._indice = value._indice;
         lista[i].nombre_poi = value.nombre_poi;
         lista[i].distancia = value.distancia;
         if (i > 0) {
@@ -20,6 +30,7 @@ function recalcula() {
         lista[i].notas = value.notas;
 
         lista[i].atributos = value.atributos;
+        lista[i].punto_referencia = value.punto_referencia;
 
         distancia_anterior = parseFloat(value.distancia);
 
@@ -39,7 +50,7 @@ function carga(fichero) {
             }
 
             lista[i] = {};
-            lista[i]._indice = i;
+            lista[i]._indice = value._indice;
             lista[i].nombre_poi = value.nombre_poi;
             lista[i].distancia = value.distancia;
             if (i > 0) {
@@ -47,6 +58,7 @@ function carga(fichero) {
             }
             lista[i].notas = value.notas;
             lista[i].atributos = value.atributos;
+            lista[i].punto_referencia = value.punto_referencia;
 
             distancia_anterior = parseFloat(value.distancia);
 
@@ -55,8 +67,6 @@ function carga(fichero) {
     }).then(function (data) {
         return lista;
     });
-
-    console.log('pois nuevo', pois);
 
     return pois;
 }
@@ -106,12 +116,9 @@ function set_distancia(o, indice) {
 
     o.innerHTML = resp;
 
-    console.log(pois);
-
     $.each(pois, function (key, value) {
         if (value._indice == indice) {
-            console.log('KEY: ' + key + ' VALUE', value, 'INDICE: ' + indice, 'VALUE._INDICE: ' + value._indice);
-            pois[key].distancia = resp;
+            pois[key].distancia = parseFloat(resp);
         }
     });
 
@@ -121,7 +128,6 @@ function set_distancia(o, indice) {
 }
 
 function muestra() {
-    console.log('muestra');
     $("#cuerpo_tabla tr").remove();
     var fila = '';
     $.each(pois, function (key, value) {
@@ -166,7 +172,16 @@ function muestra() {
             fila += '<td class="atributos" onclick="edita_registro(this,' + value._indice + ')">&nbsp</td>';
         }
 
-        fila += '<td><button onclick="borra(' + value._indice + ')" style="color:white">B</button></td>';
+        if (value._indice != value.punto_referencia) {
+            //console.log(value)
+            var punto_de_referencia = _get_punto(value.punto_referencia)
+            //console.log(punto_de_referencia)
+            fila += '<td class="referencia" title="' + punto_de_referencia.nombre_poi + '"> km ' + punto_de_referencia.distancia + '</td>';
+            fila += '<td></td>';
+        }
+        else {
+            fila += '<td><button onclick="borra(' + value._indice + ')" style="color:white">B</button></td>';
+        }
 
         fila += '</tr>';
     })
@@ -174,14 +189,12 @@ function muestra() {
     $("#cuerpo_tabla").append(fila);
 }
 
-function add(_indice, nombre_poi, distancia, notas, atributos) {
-    pois.push({ _indice, nombre_poi, distancia, notas, atributos });
+function add(_indice, nombre_poi, distancia, notas, atributos, punto_referencia) {
+    pois.push({ _indice, nombre_poi, distancia, notas, atributos, punto_referencia });
 
-    pois.sort(compare);
+    pois.sort(compara_distancia);
 
     pois = recalcula(pois);
-
-    console.log(pois);
 
     muestra(pois);
 }
@@ -211,11 +224,10 @@ function borra(indice) {
 }
 
 function edita_registro(o, indice) {
-    console.log('indice', indice);
     window.parent.edita_registro(o, indice);
 }
 
-function compare(a, b) {
+function compara_distancia(a, b) {
     if (parseFloat(a.distancia) < parseFloat(b.distancia)) {
         return -1;
     }
@@ -225,19 +237,27 @@ function compare(a, b) {
     return 0;
 }
 
-function get_punto(indice) {
+function _get_punto(indice) {
+    var punto = null;
     $.each(pois, function (key, value) {
         if (value._indice == indice) {
-            window.parent.envia_punto(pois[key]);
+            punto = pois[key];
         }
     });
+
+    return punto;
+}
+
+function get_punto(indice) {
+    window.parent.envia_punto(_get_punto(indice));
 }
 
 function cargar_fichero(nombre_fichero) {
-    console.log('cargar_fichero', nombre_fichero);
     nom_fichero = nombre_fichero;
     carga(nom_fichero).then(function (returndata) {
         pois = returndata;
+
+        pois.sort(compara_distancia);
         muestra(pois);
 
         $('#principal').floatThead();

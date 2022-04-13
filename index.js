@@ -1,3 +1,11 @@
+function get_new_indice() {
+    return document.getElementById('frm_tabla').contentWindow.get_new_indice();
+}
+
+function get_punto(indice) {
+    document.getElementById('frm_tabla').contentWindow.get_punto(indice);
+}
+
 function insertar_ascenso() {
     document.getElementById('frmNuevaVersion').src = 'nuevo_climb.html';
     document.getElementById('bloqueo').style.visibility = 'visible';
@@ -32,8 +40,8 @@ function desbloquea_insertar_registro() {
     document.getElementById('nuevo_poi_sombra').style.visibility = 'hidden';
 }
 
-function add(indice, punto, distancia, comentarios, atributos) {
-    document.getElementById('frm_tabla').contentWindow.add(indice, punto, distancia, comentarios, atributos);
+function add(indice, punto, distancia, comentarios, atributos, punto_referencia) {
+    document.getElementById('frm_tabla').contentWindow.add(indice, punto, distancia, comentarios, atributos, punto_referencia);
 }
 
 function guardar() {
@@ -46,10 +54,6 @@ function edita_registro(control, indice) {
     document.getElementById('bloqueo').style.visibility = 'visible';
     document.getElementById('nuevo_poi').style.visibility = 'visible';
     document.getElementById('nuevo_poi_sombra').style.visibility = 'visible';
-}
-
-function get_punto(indice) {
-    document.getElementById('frm_tabla').contentWindow.get_punto(indice);
 }
 
 function envia_punto(punto) {

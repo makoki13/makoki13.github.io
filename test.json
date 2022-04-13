@@ -1,0 +1,94 @@
+[
+  {
+    "_indice": 1,
+    "nombre_poi": "TEst 1",
+    "distancia": 0,
+    "notas": "",
+    "atributos": [],
+    "punto_referencia": 1,
+    "intervalo": "10.0"
+  },
+  {
+    "_indice": 5,
+    "nombre_poi": "Inicio S1",
+    "distancia": "10",
+    "notas": "D: 7Km. * T: 00:30 * F: 0 * M: 5% * Max: 6%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 5,
+    "intervalo": "6.0"
+  },
+  {
+    "_indice": 4,
+    "nombre_poi": "poi 3",
+    "distancia": 16,
+    "notas": "",
+    "atributos": [],
+    "punto_referencia": 4,
+    "intervalo": "1.0"
+  },
+  {
+    "_indice": 6,
+    "nombre_poi": "Fin S1",
+    "distancia": "17",
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 5,
+    "intervalo": "3.0"
+  },
+  {
+    "_indice": 3,
+    "nombre_poi": "test 3",
+    "distancia": 20,
+    "notas": "",
+    "atributos": [],
+    "punto_referencia": 3,
+    "intervalo": "3.0"
+  },
+  {
+    "_indice": 9,
+    "nombre_poi": "Inicio trest CP",
+    "distancia": "23",
+    "notas": "D: 2Km. * Asc: 100 * M: 3%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 9,
+    "intervalo": "2.0"
+  },
+  {
+    "_indice": 7,
+    "nombre_poi": "Inicio B1",
+    "distancia": "25",
+    "notas": "D: 5Km * T: 00:10 * M: -3% * Max: 1%",
+    "atributos": [
+      "inicio_bajada"
+    ],
+    "punto_referencia": 7,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 10,
+    "nombre_poi": "Fin trest CP",
+    "distancia": 25,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 9,
+    "intervalo": "5.0"
+  },
+  {
+    "_indice": 8,
+    "nombre_poi": "Fin B1",
+    "distancia": "30",
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
+    ],
+    "punto_referencia": 7
+  }
+]

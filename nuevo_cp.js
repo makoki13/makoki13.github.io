@@ -14,6 +14,9 @@ function add() {
     if (edicion == 'S') {
         window.parent.borra_punto(indice);
     }
+    else {
+        indice = window.parent.get_new_indice();
+    }
     var punto = document.getElementById('nombre').value;
     var inicio = document.getElementById('inicio').value;
     var distancia = document.getElementById('distancia').value;
@@ -23,10 +26,11 @@ function add() {
     var comentarios = document.getElementById('comentarios').value;
 
     /* generar punto inicio subida */
-    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km. * Asc: ' + ascension + " * M: " + media + "%", ['inicio_subida']);
+    window.parent.add(indice, "Inicio " + punto, inicio, 'D: ' + distancia + 'Km. * Asc: ' + ascension + " * M: " + media + "%", ['inicio_subida'], indice);
     /* generar punto fin subida */
+    indice_fin = window.parent.get_new_indice();
     var fin = parseFloat(inicio) + parseFloat(distancia);
-    window.parent.add(indice, "Fin " + punto, fin, comentarios, ['fin_subida']);
+    window.parent.add(indice_fin, "Fin " + punto, fin, comentarios, ['fin_subida'], indice);
 
     if (edicion == 'S') {
         salir();

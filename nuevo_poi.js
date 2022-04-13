@@ -11,12 +11,15 @@ function add() {
     if (edicion == 'S') {
         window.parent.borra_punto(indice);
     }
+    else {
+        indice = window.parent.get_new_indice();
+    }
     var punto = document.getElementById('nombre').value;
     var distancia = parseFloat(document.getElementById('distancia').value);
     var comentarios = document.getElementById('comentarios').value;
     var lista_atributos = $(".chosen-select").val();
 
-    window.parent.add(indice, punto, distancia, comentarios, lista_atributos);
+    window.parent.add(indice, punto, distancia, comentarios, lista_atributos, indice);
 
     if (edicion == 'S') {
         salir();

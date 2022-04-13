@@ -54,6 +54,12 @@ button {
     cursor: pointer;
 }
 
+.referencia {
+    text-align: center;
+    font-style: italic;
+    font-size: 11px;
+}
+
 .atributo_inicio {
     font-weight: bolder;
     color: black;
