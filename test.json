@@ -1,17 +1,19 @@
 [
   {
-    "_indice": 1,
+    "_indice": "1",
     "nombre_poi": "TEst 1",
     "distancia": 0,
     "notas": "",
-    "atributos": [],
-    "punto_referencia": 1,
+    "atributos": [
+      "inicio"
+    ],
+    "punto_referencia": "1",
     "intervalo": "5.0"
   },
   {
     "_indice": 2,
     "nombre_poi": "Inicio S1",
-    "distancia": "5",
+    "distancia": "5.0",
     "notas": "D: 5Km. * T: 00:30 * F: 1 * M: 2% * Max: 3%",
     "atributos": [
       "inicio_subida"
@@ -22,7 +24,7 @@
   {
     "_indice": 6,
     "nombre_poi": "Inicio D1",
-    "distancia": "7",
+    "distancia": "7.0",
     "notas": "D: 5Km * T: 00:20 * M: 1% * Max: 2%",
     "atributos": [
       "inicio_bajada"
@@ -33,7 +35,7 @@
   {
     "_indice": 3,
     "nombre_poi": "Fin S1",
-    "distancia": "10",
+    "distancia": "10.0",
     "notas": "",
     "atributos": [
       "fin_subida"
@@ -44,7 +46,7 @@
   {
     "_indice": 7,
     "nombre_poi": "Fin D1",
-    "distancia": "12",
+    "distancia": "12.0",
     "notas": "",
     "atributos": [
       "fin_bajada"
@@ -55,7 +57,7 @@
   {
     "_indice": 12,
     "nombre_poi": "Inicio CP2",
-    "distancia": "27",
+    "distancia": "27.0",
     "notas": "D: 11Km. * Asc: 300 * M: 2%",
     "atributos": [
       "inicio_subida"
@@ -66,7 +68,7 @@
   {
     "_indice": 13,
     "nombre_poi": "Fin CP2",
-    "distancia": 38,
+    "distancia": "38.0",
     "notas": "",
     "atributos": [
       "fin_subida"
