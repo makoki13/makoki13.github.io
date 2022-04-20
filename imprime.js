@@ -19,7 +19,8 @@ function imprime_pdf() {
 
     var pois = document.getElementById('frm_tabla').contentWindow.get_pois();
     if (pois) {
-        var j = inicio_altura;
+        var j = inicio_altura; var fila = 1;
+        var estado = estado_actual = 0; //0: neutral, 1: subiendo, 2: bajando
         $.each(pois, function (key, value) {
             var distancia = parseFloat(value.distancia).toFixed(1).toString();
             if (value.intervalo) {
@@ -30,38 +31,95 @@ function imprime_pdf() {
             }
 
             if (value.atributos.includes('inicio_subida')) {
+                estado_actual = 1;
+                console.log('inicio subida', value.distancia);
+                doc.setFillColor(128, 0, 0);
+                doc.setTextColor(255, 255, 255);
+                doc.setFont('helvetica', '', 'normal');
+            }
+            else if (value.atributos.includes('fin_subida')) {
+                estado_actual = 0;
+                console.log('fin subida', value.distancia);
+                doc.setFillColor(255, 255, 255);
+                doc.setTextColor(128, 0, 0);
+                doc.setFont('helvetica', '');
+            }
+            else if (value.atributos.includes('inicio_bajada')) {
+                estado_actual = 2;
+                console.log('inicio bajada', value.distancia);
+                doc.setFillColor(0, 128, 0);
+                doc.setTextColor(255, 255, 255);
+                doc.setFont('helvetica', '', 'normal');
+            }
+            else if (value.atributos.includes('fin_bajada')) {
+                estado_actual = 0;
+                console.log('fin bajada', value.distancia);
+                doc.setFillColor(255, 255, 255);
+                doc.setTextColor(0, 128, 0);
+                doc.setFont('helvetica', '');
             }
             else if ((value.atributos.includes('inicio') || value.atributos.includes('poblacion'))) {
                 console.log('inicio / poblacion', value.distancia);
-                doc.setTextColor(0, 255, 0);
-                doc.setFillColor(255, 0, 0);
-                doc.setFont('helvetica', 'italic', 'bold');
-            } else if (value.atributos.includes('fin_subida')) {
-                console.log('fin subida', value.distancia);
                 doc.setFillColor(255, 255, 255);
-                doc.setTextColor(255, 0, 0);
-                doc.setFont('helvetica', '');
+                doc.setTextColor(0, 0, 0);
+                doc.setFont('helvetica', '', 'bold');
             }
             else {
                 console.log('otros', value.distancia);
-                doc.setTextColor(0, 0, 0);
                 doc.setFillColor(255, 255, 255);
-                doc.setFont('helvetica', '');
+                doc.setTextColor(0, 0, 128);
+                doc.setFont('helvetica', 'italic');
             }
 
             doc.rect(margen_izdo, j - margen_sup_rect, ancho_columna1, margen_inf_rect, 'FD');
             doc.text(value.nombre_poi, margen_izdo, j);
 
+            doc.setFillColor(255, 255, 255);
+            doc.setTextColor(0, 0, 0);
+            doc.setFont('helvetica', '', '');
+            if (estado == 1) {
+                doc.setFillColor(255, 128, 128);
+            }
+            if (estado == 2) {
+                doc.setFillColor(128, 255, 128);
+            }
 
+            estado = estado_actual;
 
-            doc.text('|', margen_izdo + ancho_columna1, j);
+            //doc.text('|', margen_izdo + ancho_columna1, j);
+            //doc.text(distancia, margen_izdo + ancho_columna1 + 1, j);
+
+            doc.rect(margen_izdo + ancho_columna1, j - margen_sup_rect, ancho_columna2, margen_inf_rect, 'FD');
             doc.text(distancia, margen_izdo + ancho_columna1 + 1, j);
-            doc.text('|', margen_izdo + ancho_columna1 + ancho_columna2, j);
+
+            doc.setFont('helvetica', '', '');
+            doc.setFillColor(255, 255, 255);
+            doc.setTextColor(0, 0, 0);
+            if (intervalo >= 10) {
+                doc.setFillColor(255, 128, 128);
+                doc.setFont('helvetica', '', 'bold');
+            }
+            else if (intervalo >= 5) {
+                doc.setFillColor(255, 255, 128);
+                doc.setFont('helvetica', '', 'bold');
+            }
+
+            doc.rect(margen_izdo + ancho_columna1 + ancho_columna2, j - margen_sup_rect, ancho_columna3, margen_inf_rect, 'FD');
             doc.text(intervalo, margen_izdo + ancho_columna1 + ancho_columna2 + 1, j);
-            doc.text('|', margen_izdo + ancho_columna1 + ancho_columna2 + ancho_columna3, j);
+
+            //doc.text('|', margen_izdo + ancho_columna1 + ancho_columna2, j);
+            //doc.text(intervalo, margen_izdo + ancho_columna1 + ancho_columna2 + 1, j);
+            //doc.text('|', margen_izdo + ancho_columna1 + ancho_columna2 + ancho_columna3, j);
             //doc.line(margen_izdo, j + alto_lineas, margen_izdo + ancho_columna1 + ancho_columna2 + ancho_columna3, j + alto_lineas);
 
             j += alto_puntos;
+            fila++;
+
+            if (fila == 70) {
+                doc.addPage();
+                j = inicio_altura;
+                fila = 1;
+            }
         });
     }
 

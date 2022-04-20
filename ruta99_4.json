@@ -486,6 +486,303 @@
     "notas": "",
     "atributos": [
       "fin_bajada"
-    ]
+    ],
+    "intervalo": "0.7"
+  },
+  {
+    "_indice": 52,
+    "nombre_poi": "Inicio Subida 7",
+    "distancia": "74.8",
+    "notas": "T: 00:13 F: 0.64 M: 5.4% Max: 12.4%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 53,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 70,
+    "nombre_poi": "Inicio CP 8",
+    "distancia": "74.8",
+    "notas": "D: 2.1Km. * Asc:  * M: %",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 71,
+    "intervalo": "2.1"
+  },
+  {
+    "_indice": 71,
+    "nombre_poi": "Fin CP 8",
+    "distancia": 76.89999999999999,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 70,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 53,
+    "nombre_poi": "Fin Subida 7",
+    "distancia": "76.9",
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 52,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 62,
+    "nombre_poi": "Inicio Bajada 7",
+    "distancia": "76.9",
+    "notas": "D: 3.0999999999999943Km * T: 00:06 * M: -6.5% * Max: 2.3%",
+    "atributos": [
+      "inicio_bajada"
+    ],
+    "punto_referencia": 63,
+    "intervalo": "3.0"
+  },
+  {
+    "_indice": 72,
+    "nombre_poi": "Inicio CP9",
+    "distancia": "79.9",
+    "notas": "D: 4.4Km. * Asc:  * M: %",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 73,
+    "intervalo": "0.1"
+  },
+  {
+    "_indice": 54,
+    "nombre_poi": "Inicio Subida 8",
+    "distancia": "80",
+    "notas": "D: 2Km. * T: 00:13 * F: 0.72 * M: 5.3% * Max: 9.9%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 55,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 63,
+    "nombre_poi": "Fin Bajada 7",
+    "distancia": "80.0",
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
+    ],
+    "punto_referencia": 62,
+    "intervalo": "0.6"
+  },
+  {
+    "_indice": 49,
+    "nombre_poi": "Inicio Gravel",
+    "distancia": 80.6,
+    "notas": "",
+    "atributos": [
+      "incidencia"
+    ],
+    "punto_referencia": 49,
+    "intervalo": "1.4"
+  },
+  {
+    "_indice": 55,
+    "nombre_poi": "Fin Subida 8",
+    "distancia": "82",
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 54,
+    "intervalo": "2.3"
+  },
+  {
+    "_indice": 64,
+    "nombre_poi": "Inicio Bajada 8",
+    "distancia": "84.3",
+    "notas": "D: 3.299999999999997Km * T: 00:09 * M: -4.9% * Max: 11.5%",
+    "atributos": [
+      "inicio_bajada"
+    ],
+    "punto_referencia": 65,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 73,
+    "nombre_poi": "Fin CP9",
+    "distancia": 84.30000000000001,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 72,
+    "intervalo": "3.3"
+  },
+  {
+    "_indice": 50,
+    "nombre_poi": "Fin gravel. Riodeva n.",
+    "distancia": 87.6,
+    "notas": "",
+    "atributos": [
+      "incidencia"
+    ],
+    "punto_referencia": 50,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 65,
+    "nombre_poi": "Fin Bajada 8",
+    "distancia": "87.6",
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
+    ],
+    "punto_referencia": 64,
+    "intervalo": "0.3"
+  },
+  {
+    "_indice": 56,
+    "nombre_poi": "Inicio Subida 9",
+    "distancia": "87.9",
+    "notas": "D: 8.299999999999997Km. * T: 00:56 * F: 3.22 * M: 5.6% * Max: 19.2%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 57,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 74,
+    "nombre_poi": "Inicio CP10",
+    "distancia": "87.9",
+    "notas": "D: 12.2Km. * Asc:  * M: %",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 75,
+    "intervalo": "8.3"
+  },
+  {
+    "_indice": 57,
+    "nombre_poi": "Fin Subida 9",
+    "distancia": "96.2",
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 56,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 66,
+    "nombre_poi": "Inicio Bajada 9",
+    "distancia": "96.2",
+    "notas": "D: 1.5Km * T: 00:03 * M: -4.6% * Max: 5.5%",
+    "atributos": [
+      "inicio_bajada"
+    ],
+    "punto_referencia": 67,
+    "intervalo": "1.5"
+  },
+  {
+    "_indice": 58,
+    "nombre_poi": "Inicio Subida 10",
+    "distancia": "97.7",
+    "notas": "D: 2.3999999999999915Km. * T: 00:14 * F: 1 * M: 4.1% * Max: 11%",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 59,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 67,
+    "nombre_poi": "Fin Bajada 9",
+    "distancia": "97.7",
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
+    ],
+    "punto_referencia": 66,
+    "intervalo": "2.4"
+  },
+  {
+    "_indice": 59,
+    "nombre_poi": "Fin Subida 10",
+    "distancia": "100.1",
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 58,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 68,
+    "nombre_poi": "Inicio Bajada 10",
+    "distancia": "100.1",
+    "notas": "D: 2.5Km * T: 00:05 * M: -7.1% * Max: 4.9%",
+    "atributos": [
+      "inicio_bajada"
+    ],
+    "punto_referencia": 69,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 75,
+    "nombre_poi": "Fin CP10",
+    "distancia": 100.10000000000001,
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 74,
+    "intervalo": "2.5"
+  },
+  {
+    "_indice": 60,
+    "nombre_poi": "Inicio Inicio Subida 11",
+    "distancia": "102.6",
+    "notas": "D: 0.30000000000001137Km. * T:  * F:  * M: % * Max: %",
+    "atributos": [
+      "inicio_subida"
+    ],
+    "punto_referencia": 61,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 69,
+    "nombre_poi": "Fin Bajada 10",
+    "distancia": "102.6",
+    "notas": "",
+    "atributos": [
+      "fin_bajada"
+    ],
+    "punto_referencia": 68,
+    "intervalo": "0.3"
+  },
+  {
+    "_indice": 51,
+    "nombre_poi": "Camarena de la Sierra",
+    "distancia": 102.9,
+    "notas": "",
+    "atributos": [
+      "poblacion"
+    ],
+    "punto_referencia": 51,
+    "intervalo": "0.0"
+  },
+  {
+    "_indice": 61,
+    "nombre_poi": "Fin Inicio Subida 11",
+    "distancia": "102.9",
+    "notas": "",
+    "atributos": [
+      "fin_subida"
+    ],
+    "punto_referencia": 60
   }
 ]
